@@ -8,7 +8,7 @@
 
 **Step 2:** Copy the HTTPS of this repository and clone it to your machine. You can do so by running this command as well:  
 
-`git clone https://github.com/leonardo-ra/PI.git`  
+`git clone git@github.com:leonardo-ra/PI.git`  
 
 **Step 3:** After cloning this repo, begin by installing the required libraries for this project to work:  
 
