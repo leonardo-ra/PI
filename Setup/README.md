@@ -29,7 +29,7 @@ The IP address should be on the same network as the Robot i.e:
 
 ***The Robot's IP address setup will be answered further below.***
 
-**Step 6:** Connect the camera to your USB type C port.
+**Step 6:** Connect the camera to your USB type-C port.
 
 
 Your connection should be well established on your machine's side of things now. :white_check_mark:
