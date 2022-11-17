@@ -14,7 +14,7 @@
 
 `pip install -r requirements.txt` 
 
-Your setup on the terminal should be good to go [x].
+- [x] Your setup on the terminal should be good to go.
 
 **Step 4:** Connect the Ethernet cable to your machine's Ethernet port - it should also work by using an Ethernet/USB adaptor.
 
@@ -32,7 +32,7 @@ The IP address should be on the same network as the Robot i.e:
 **Step 6:** Connect the camera to your USB port.
 
 
-Your connection should be well established on your machine's side of things now [x].
+- [x] Your connection should be well established on your machine's side of things now.
 
 ### On the Ur5e teach Pendant:  
 
@@ -71,7 +71,7 @@ You can set the remaining parameters as 0.0.0.0
 
 **Step 12:** Finally, press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - switch to *Remote Control*.
 
-The Robot Arm is now fully setup [x]
+- [x] The Robot Arm is now fully setup.
 
 ### Run it!
 
