@@ -1,4 +1,4 @@
-# Project setup  
+# Project Setup Manual (PSM)
 
 ### On your machine:  
 
@@ -76,3 +76,6 @@ You can set the remaining parameters as 0.0.0.0
 **Step 13:** After these steps, everything should be set for you to run the code on your machine remotely. Just type this in your terminal:
 
 `python3 **nome final do programa.py**` 
+
+
+**NOTA** : Este depois vai ser o README que se vê no front page do gitHub. Acho que faz sentido substituir o do progresso por este, penso eu.
