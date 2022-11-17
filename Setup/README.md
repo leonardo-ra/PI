@@ -69,7 +69,7 @@ The 2FG and TCP URCaps should also be added to the *Robot Program* (they are usu
 
 You can set the remaining parameters as 0.0.0.0  
 
-**Step 12:** Finally, press the *Teaching Pendant* icon on top-right corner of the welcome screen - it should read *Local* by default - switch to *Remote Control*.
+**Step 12:** Finally, press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - switch to *Remote Control*.
 
 ### Run it!
 
