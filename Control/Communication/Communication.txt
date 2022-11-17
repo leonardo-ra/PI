@@ -1,0 +1,8 @@
+Os algoritmos de comunicação foram os que andamos a fazer sem git... Por byte/URX etc...
+Não meti aqui mas depois podemos deixar se quiserem.
+
+Se formos usando outros ou melhorando o rtde, esses scripts podem ser desenvolvidos nesta pasta.
+Podem ser criadas outras subpastas também.
+
+A ideia é isto ser onde vamos guardando as iterações/testes. É o sandbox.
+Depois podemos juntar tudo num branch/script mais integrado (mais tarde)
