@@ -6,7 +6,7 @@
 
 `pip install git`  
 
-**Step 2:** Copy the HTTPS of this repository and clone it to your machine. You can do so by running this command as well:  
+**Step 2:** Copy the SSH key of this repository and clone it to your machine. You can do so by running this command as well:  
 
 `git clone git@github.com:leonardo-ra/PI.git`  
 
