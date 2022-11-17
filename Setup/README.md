@@ -71,7 +71,7 @@ You can set the remaining parameters as 0.0.0.0
 
 **Step 12:** Finally, press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - switch to *Remote Control*.
 
-The Robot Arm is now fully setup.:white_check_mark:
+The Robot Arm is now fully setup. :white_check_mark:
 
 ### Run it!
 
