@@ -1,4 +1,4 @@
-# Project Setup Manual (PSM)
+# Project Instruction Manual (PRISM):
 
 ### On your machine:  
 
