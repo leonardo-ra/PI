@@ -14,7 +14,7 @@
 
 `pip install -r requirements.txt` 
 
-Your setup on the terminal side of things should be good to go.  
+Your setup on the terminal should be good to go [x].
 
 **Step 4:** Connect the Ethernet cable to your machine's Ethernet port - it should also work by using an Ethernet/USB adaptor.
 
