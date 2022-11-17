@@ -1,5 +1,6 @@
 Todos os scripts de visão (RobotFlow/Yolo) podem começar a implementar aqui.
-Se quiserem façam mais pastas dentro destas.
+Se quiserem façam mais pastas dentro destas. 
+Podem preferir até ter duas subpastas dentro desta para cada.
 
 A ideia é isto ser onde vamos guardando as iterações/testes. É o sandbox.
 Depois podemos juntar tudo num branch/script mais integrado (mais tarde)
