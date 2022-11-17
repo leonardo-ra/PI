@@ -1,6 +1,8 @@
 # Industrial Project 
 
-#### Current status: Construction I 
+### Current Phase: Construction I 
+
+#### Status:
 
 ![100%](https://progress-bar.dev/17)
 
