@@ -32,7 +32,7 @@ The IP address should be on the same network as the Robot i.e:
 **Step 6:** Connect the camera to your USB port.
 
 
-Your connection should be well established on your machine's side of things now.
+Your connection should be well established on your machine's side of things now [x].
 
 ### On the Ur5e teach Pendant:  
 
@@ -70,6 +70,8 @@ The 2FG and TCP URCaps should also be added to the *Robot Program* (they are usu
 You can set the remaining parameters as 0.0.0.0  
 
 **Step 12:** Finally, press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - switch to *Remote Control*.
+
+The Robot Arm is now fully setup [x]
 
 ### Run it!
 
