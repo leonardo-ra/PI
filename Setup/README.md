@@ -10,7 +10,7 @@
 
 `git clone git@github.com:leonardo-ra/PI.git`  
 
-**Step 3:** After cloning this repo, start by installing the required libraries for this project to work:  
+**Step 3:** After cloning this repo, start by installing the required libraries. In the *Setup* directory run:  
 
 `pip install -r requirements.txt` 
 
