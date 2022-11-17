@@ -73,7 +73,7 @@ You can set the remaining parameters as 0.0.0.0
 
 The Robot Arm is now fully setup. :white_check_mark:
 
-### Run it!
+### *Send it!*
 
 **Step 13:** After these steps, everything should be set for you to run the code on your machine remotely. Just type this in your terminal:
 
