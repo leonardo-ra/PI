@@ -5,4 +5,4 @@ Se formos usando outros ou melhorando o rtde, esses scripts podem ser desenvolvi
 Podem ser criadas outras subpastas também.
 
 A ideia é isto ser onde vamos guardando as iterações/testes. É o sandbox.
-Depois podemos juntar tudo num branch/script mais integrado (mais tarde)
+Depois podemos juntar tudo num branch/script mais integrado (mais tarde).
