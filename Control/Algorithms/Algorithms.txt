@@ -1,0 +1,5 @@
+Os algoritmos de controlo (por ex: calcular distâncias, calcular poses do braço etc...) 
+podem ser desenvolvidos nesta pasta, podem ser criadas outras subpastas também.
+
+A ideia é isto ser onde vamos guardando as iterações/testes. É o sandbox.
+Depois podemos juntar tudo num branch/script mais integrado (mais tarde)
