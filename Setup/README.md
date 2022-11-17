@@ -1,20 +1,18 @@
 # Project setup  
 
-## Here are the various steps you should take for this program to work:    
+### On your machine:  
 
-#### On your machine:  
+1. On a **Linux** based operating system, start by installing git, running the following comand on your terminal:  
 
-1. On a ***Linux*** based operating system, start by installing git, running the following comand on your terminal:  
-
-'pip install git'  
+`pip install git`  
 
 2. Copy the HTTPS of this repository and clone it to your machine. You can do so by runnign this comand as well **Adicionar imagem** :  
 
-'git clone https://github.com/leonardo-ra/PI.git"  
+`git clone https://github.com/leonardo-ra/PI.git`  
 
 3. After cloning this repo, begin by installing the required libraries for this project to work:  
 
-'pip install -r requirements.txt'  
+`pip install -r requirements.txt` 
 
 Your setup on the terminal side of things should be good to go.  
 
@@ -36,7 +34,7 @@ The IP adress should be on the same network as the Robot i.e:
 
 Your connection should be well established on your machine's side of things now.
 
-#### On the Ur5e teach Pendant:  
+### On the Ur5e teach Pendant:  
 
 7. Start by turning the Ur5e completely ON (releasing the breaks).  
 
@@ -48,7 +46,7 @@ Your connection should be well established on your machine's side of things now.
 
 9. At the left-top of the welcome screen, go to the *Installation* icon. Press the *URCaps* tab. In this section you should see all the installed UrCap nodes, including the 2FG Gripper and TCP caps. Set the parameters of the External Control URCap in acordance with the previously mentioned step 5. It should be set to something like this (using the same dummy IP):  
 
-| Remote Host's IP (your machine's connection IP) | Port (you should not have to change this field) |
+| Remote Host's IP | Port (you should not have to change this field) |
 | ----------- | ----------- |
 | 192.1.1.**2** | 50002 |
 
@@ -73,7 +71,7 @@ You can set the remainding parameters as 0.0.0.0
 
 12. Finally, press the *Teaching Pendant* icon on the welcome screen, and choose *Remote Control*.
 
-#### Run it!
+### Run it!
 
 13. After these steps, everything should be set for you to run the code on your machine remotely:
 
