@@ -6,7 +6,7 @@
 
 - [x] Established communication with Robot Arm 
 - [x] *Robotflow* vision recognition
-- [ ] 3D Printed Mount for the Camera
+- [ ] 3D Printed mount for the camera
 - [ ] YOLO implementation
 - [ ] Gripper algorithms
 - [ ] Control algorithms
