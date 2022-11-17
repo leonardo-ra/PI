@@ -10,4 +10,5 @@
 - [ ] Control algorithms
 
 
-*Progress:*[0%](https://progress-bar.dev/17)
+##### Progress::
+[0%](https://progress-bar.dev/17)
