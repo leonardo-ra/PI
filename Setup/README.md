@@ -6,7 +6,7 @@
 
 `pip install git`  
 
-**Step 2:** Copy the HTTPS of this repository and clone it to your machine. You can do so by runnign this comand as well **Adicionar imagem** :  
+**Step 2:** Copy the HTTPS of this repository and clone it to your machine. You can do so by running this command as well **Adicionar imagem** :  
 
 `git clone https://github.com/leonardo-ra/PI.git`  
 
@@ -16,18 +16,18 @@
 
 Your setup on the terminal side of things should be good to go.  
 
-**Step 4:** Connect the Ethernet cable tou your machine's Ethernet port - it shoud also work by using an Ethernet/USB adaptor.
+**Step 4:** Connect the Ethernet cable to your machine's Ethernet port - it should also work by using an Ethernet/USB adaptor.
 
-**Step 5:**. In your network settings, make sure the Ethernet connection is setup with a ***static*** IPV4 IP address:  
+**Step 5:** In your network settings, make sure the Ethernet connection is set up with a ***static*** IPV4 IP address:  
 
 **Por imagem**  
 
-The IP adress should be on the same network as the Robot i.e:
+The IP address should be on the same network as the Robot i.e:
  - If you set your Robot's IP address with: 192.1.1.1 ; submask: 255.255.255.0 ; Gateway: 192.1.1.1  
 
- - Your machine's ethernet connection should be something like: 192.1.1.**2** ; submask: 255.255.255.0 ; Gateway: 192.1.1.**2**  
+ - Your machine's Ethernet connection should be something like: 192.1.1.**2** ; submask: 255.255.255.0 ; Gateway: 192.1.1.**2**  
 
-***The Robot's IP address setup will be answered further bellow.***
+***The Robot's IP address setup will be answered further below.***
 
 **Step 6:** Connect the camera to your USB port.
 
@@ -36,7 +36,7 @@ Your connection should be well established on your machine's side of things now.
 
 ### On the Ur5e teach Pendant:  
 
-**Step 7:** Start by turning the Ur5e completely ON (releasing the breaks).  
+**Step 7:** Start by turning the Ur5e completely ON (releasing the brakes).  
 
 **Step 8:** In the welcome menu, press the *Load Program* Icon. You should see a program called **Inserir nome do programa final**, load it by opening the program.  
 
@@ -44,7 +44,7 @@ Your connection should be well established on your machine's side of things now.
 
 ***If you do not manage to find this specific program, proceed with the rest of the steps normally***  
 
-**Step 9:** At the left-top of the welcome screen, go to the *Installation* icon. Press the *URCaps* tab. In this section you should see all the installed UrCap nodes, including the 2FG Gripper and TCP caps. Set the parameters of the External Control URCap in acordance with the previously mentioned step 5. It should be set to something like this (using the same dummy IP):  
+**Step 9:** At the left-top of the welcome screen, go to the *Installation* icon. Press the *URCaps* tab. In this section you should see all the installed UrCap nodes, including the 2FG Gripper and TCP caps. Set the parameters of the External Control URCap in accordance with the previously mentioned step 5. It should be set to something like this (using the same dummy IP):  
 
 | Remote Host's IP | Port (you should not have to change this field) |
 | ----------- | ----------- |
@@ -63,11 +63,11 @@ The 2FG and TCP URCaps should also be added to the *Robot Program* (they are usu
 
 ***If you loaded the program in step 8 this is what you should see***
 
-**Step 11:** Go to the *Dropdown menu* icon at the top-right corner of the welcome screen. Press the *Settings* tab -> *Network* tab, and set the Robot's IP address, submask and gateway. Press apply. ***Make sure these three fields match the instructions in step 5.***  
+**Step 11:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab -> *Network* tab, and set the Robot's IP address, submask and gateway. Press apply. ***Make sure these three fields match the instructions in step 5.***  
 
 **Adicionar imagem**  
 
-You can set the remainding parameters as 0.0.0.0  
+You can set the remaining parameters as 0.0.0.0  
 
 **Step 12:** Finally, press the *Teaching Pendant* icon on the welcome screen, and choose *Remote Control*.
 
