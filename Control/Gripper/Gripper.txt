@@ -1,0 +1,6 @@
+Os algoritmos para a garra podem ser desenvolvidos nesta pasta.
+Podem ser criadas outras subpastas também.
+
+
+A ideia é isto ser onde vamos guardando as iterações/testes. É o sandbox.
+Depois podemos juntar tudo num branch/script mais integrado (mais tarde).
