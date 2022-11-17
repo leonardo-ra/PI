@@ -1,6 +1,6 @@
 # Industrial Project 
 
-#### Current status: Construction I 
+#### Current status: Construction I  
 
 - [x] Established communication with Robot Arm 
 - [x] *Robotflow* vision recognition
