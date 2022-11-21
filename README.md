@@ -7,8 +7,8 @@
 ![100%](https://progress-bar.dev/17)
 
 - [x] Established communication with Robot Arm 
-- [x] *Robotflow* vision recognition
+- [x] *Roboflow* vision recognition
 - [ ] 3D Printed mount for the camera
-- [ ] YOLO implementation
+- [x] YOLO implementation (Test with dataset missing)
 - [ ] Gripper algorithms
 - [ ] Control algorithms
