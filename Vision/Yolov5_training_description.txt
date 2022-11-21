@@ -1,0 +1,22 @@
+How to run XFP jupyter notebook to train the network on google colab:
+
+1 - First run the first block if you don't have the git cloned already in your computer. If you clone you will get a folder named yolov5 with all the tools you will need to train and use the network.
+2 - Run the block "Setup" to setup your environment
+3 - Put your dataset folder in the same directory as the yolov5 (same folder as the one mentioned before) (We tested with a dataset made on roboflow and then download to our PC in a zip file with the yolov5 format but you can use your own labelling you just have to be careful to make it with a yolov5 format. You can google it to know more about this format, or check ours).
+4 - Configure the train command:
+	Select the image sizes of your images in dataset
+	Select the hyperparameters (batch size, # epochs)
+		batch size - number of training samples to work through before the model’s internal parameters are updated.
+		# epochs - number of complete passes through the training dataset.
+	Indicate the dataset path
+	Indicate the weights file (weigths you wanna start with)
+
+5 - Run the train command (can take some time depending on your configurations) (prints a lot of information like: the layers of the network,convolutional, the epochs we are running, confidence score of each epoch, time to complete when finished, where was saved the weights, ...)
+6 - You can run the "Show Training Results" block to see the different metrics and values we had during training
+7 - Configure the prediction command:
+	Indicate the weights file (weigths you wanna use, best ones normally)
+	Select the image sizes of your images in dataset
+	Select confidance score threshold
+	Indicate the dataset path of the images we want to the predictions on
+8 - You can run "Display Inference Images" to see the results on the images to do the predictions on
+9 - Run the block "Save model" to save the weigths file on your computer (If you are not running on google colab you don't need to run this block)
