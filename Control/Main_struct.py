@@ -4,6 +4,8 @@ while ROBOT Program:
     
     while connection_with_computer == False:
         try_to_connect
+        
+    resets variables
 
     if any test ended:
 
@@ -16,14 +18,16 @@ while ROBOT Program:
 
         sends trigger
         confirm position??
+        
+        removes optic fiber
 
         unlock removal mechanism
         remove XFP
 
         if Result_of_test == ok:
-            Drop_in_fixed point;
+            Drop_in_fixed point
         if Result_of_test == nok:
-            Drop_in_fixed point;
+            Drop_in_fixed point
 
 
     if no test ended:
@@ -57,6 +61,7 @@ while ROBOT Program:
 
         insert XFP
         lock removal mechanism
+        adds optic fiber
 
     reset_conection_with_coputer
 
