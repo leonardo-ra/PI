@@ -1,18 +1,21 @@
 
 
 while ROBOT Program:
+   
+    resets variables
     
     while connection_with_computer == False:
         try_to_connect
-        
-    resets variables
-
+       
+    sends trigger
+    test = communicate_with_test_box()
+    
     if any test ended:
 
         go to test box fixed position 
 
         sends trigger
-        Position_of_port,Result_of_test = input_from_computer
+        Position_of_port,Result_of_test = input_from_computer(find_port_of_test)
 
         get closer to Position_of_port
 
@@ -35,7 +38,7 @@ while ROBOT Program:
         go to XFP board fixed position 
 
         sends trigger
-        Position_of_XFP, Side_of_XFP = input_from_computer
+        Position_of_XFP, Side_of_XFP = input_from_computer(find_xfp)
 
         get close to Position_of_XFP
         
@@ -55,7 +58,7 @@ while ROBOT Program:
         go to test box fixed position 
 
         sends trigger
-        Location_of_port = input_from_computer
+        Location_of_port = input_from_computer(find_free_port)
 
         go to Location_of_port
 
