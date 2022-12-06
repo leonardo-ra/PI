@@ -41,4 +41,4 @@ find_free_port()
 
 communicate_with_test_box()
     input: 0
-    output: 1 whitch return the last test that ended
+    output: 2 whitch return the last test that ended and the result
