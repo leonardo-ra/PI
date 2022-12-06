@@ -17,7 +17,7 @@ while True:
 
     elif s == w:
         find_free_port()
-    elif s == w:
+    elif s == k:
         #verifies if a test ended
         communicate_with_test_box()
     else:
@@ -27,17 +27,17 @@ while True:
 # How many inputs and outputs the functions have
 find_port_of_test()
     input: photo
-    output: 6 - center of port defined by - XYZ and each rotation
+    output: 3. x.y and alpha
 
 find_xfp()
     input: photo
-    output: 6 - center of xfp defined by - XYZ and each rotation
+    output: 3. x.y and alpha
     
     We may need to define a new label as the back of the xfp, to grab it by there
 
 find_free_port()
     input: photo
-    output:
+    output: 3. x.y and alpha
 
 communicate_with_test_box()
     input: 0
