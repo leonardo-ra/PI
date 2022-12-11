@@ -17,7 +17,20 @@
         # send '3 A' to start the test
         # send '4 A' to receive the stat/results
 
+import socket
 import time
+HOST = "127.0.0.1"  # IP address 
+PORT = 13000        # Port number
+
+# copied from Server_robot_v2.py
+'''s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind((HOST, PORT))        # Bind to the port  
+s.listen()                  # Wait for client connection
+c, addr = s.accept()        # Establish connection with client
+'''
+
+
 # tratar da string do comando 4
 #1string_example = "Serial Number: 1015001350 Part Number: PAN2XUXSSA3I Slot: 1 Module: A Start date: 12/09/2022 Start time: 10:06:57 End date: 12/09/2022 End time: 10:13:27 Software version (tester): v1.12 Firmware version (tester): v1.45 Temperature (tester): 35 XFP firmware version: v10.87 XFP power consumption: 2.47 DDMI Tx Power: 7.8 DDMI Rx Power: -16.5 DDMI Tx Bias Current: 37.75 DDMI Temperature: 37 DDMI Vcc: 3.25 Tx Power CH1: 8.78 Tx Power CH2: 8.82 Tx Power CH3: 8.42 Tx Power CH4: 7.02 Step 1 PASS/FAIL: PASS Step 2 PASS/FAIL: PASS Step 3 PASS/FAIL: PASS Step 4 PASS/FAIL: PASS Step 5 PASS/FAIL: PASS Step 6 PASS/FAIL: PASS Error Code: - Final Result:     "
 string_example = "Serial Number: 1015001350\nPart Number: PAN2XUXSSA3I\nSlot: 1\nModule: A\nStart date: 12/09/2022\nStart time: 10:06:57\nEnd date: 12/09/2022\nEnd time: 10:13:27\nSoftware version (tester): v1.12\nFirmware version (tester): v1.45\nTemperature (tester): 35\nXFP firmware version: v10.87\nXFP power consumption: 2.47\nDDMI Tx Power: 7.8\nDDMI Rx Power: -16.5\nDDMI Tx Bias Current: 37.75\nDDMI Temperature: 37\nDDMI Vcc: 3.25\nTx Power CH1: 8.78\nTx Power CH2: 8.82\nTx Power CH3: 8.42\nTx Power CH4: 7.02\nStep 1 PASS/FAIL: PASS\nStep 2 PASS/FAIL: PASS\nStep 3 PASS/FAIL: PASS\nStep 4 PASS/FAIL: PASS\nStep 5 PASS/FAIL: PASS\nStep 6 PASS/FAIL: PASS\nError Code: -\nFinal Result: PASS"
@@ -53,36 +66,50 @@ def test_result(example):
 
 def main():
     # send TCP command ('1 A') Connect System
-    box_connect = TCP_command('1 A')
+    box_connect = "Successfully finished!\nModule A is ready to be used!" #"Module A: OLT CH1 not!\n Error code: 3"
+    #box_connect = TCP_command('1 A')
     while ('Successfully finished!' not in box_connect):
-        print(box_connect + '\nSending TCP command again')
+        print(box_connect + '\nSending TCP command Connect System again')
         # maybe wait some time?
-        TCP_command('1 A')
-
+        #time.sleep(120)
+        #box_connect = TCP_command('1 A')
     print(box_connect)
 
     # send TCP command ('2 A') Read Modules
-    read_module = TCP_command('2 A')
-    '''if('Successfully finished!' not in box_connect):
-        print(box_connect + '\nSending TCP command again')
-        # maybe wait some time?
-        TCP_command('2 A')
+    #read_module = "Error: Module A is not connected!"
+    #read_module = "Slot 1, Module A, Serial Number: 1014009530Slot 2, Module A, Serial Number: Not foundSlot 3, Module A, Serial Number: 1015001319Slot 4, Module A, Serial Number: 1015001342" 
+    read_module = "Slot 1, Module A, Serial Number: 1015001350\nSlot 2, Module A, Serial Number: 1015001356\nSlot 3, Module A, Serial Number: 1015001129\nSlot 4, Module A, Serial Number: 1015001319"
+    #read_module = TCP_command('2 A')
+    while (('Error' in read_module) or ('Not found' in read_module)):# Se der erro, nenhum esta ligado, e no nosso caso acho que apenas nos interessa que estejam os quatro inseridos
+        print(read_module + '\nSending TCP command Read Module again')
+        #time.sleep(10) # maybe wait some time? or send which slot is not found to the robot
+        #read_module = TCP_command('2 A')
+    print(read_module)
 
-    print(box_connect)'''
+    # send TCP command ('3 A') Start Test
+    #start_test = "Error: Module A is not connected!" 
+    start_test = "Successfully started!Testing is running in background..."
+    #start_test = TCP_command('3 A')
+    while ('Error' in start_test):
+        print(start_test + '\nSending TCP command Start Test again')
+        # diria que aqui os erros que podem dar dependem dos commandos anteriores, por isso ou vai atras enviar os outros comandos, 
+        # ou nunca dá erro porque já o elimina-mos nos passos anteriores
+        #start_test = TCP_command('3 A')
+    print(start_test)
 
-    test_finish = ' -'
-    while (test_finish == ' -'):  # verificar o que realmente vem quando o teste ainda não terminou
-        print(test_finish)
+    # send TCP command ('4 A') Tracking Results
+    # tracking = TCP_command('4 A')
+    res_test = test_result(string_example)  # mudar para tracking
+    # ATENÇÃO: a string virá com 4 slots, se vier tudo numa string, -_-, se vierem 4 string separadas, :D, mas deve ser feito para todas
+    while (res_test['Final Result'] == ' -'):  # verificar o que realmente vem quando o teste ainda não terminou
+        #print(test_finish)
 
         # wait some time
-        #time.sleep(120) # 2 min
-
-        # sends TCP command ('4 A')
-        # tracking = TCP_command('4 A') 
+        #time.sleep(120) # 2 min       
         
+        # tracking = TCP_command('4 A')
         res_test = test_result(string_example)  # mudar para tracking
-        print(res_test['Slot'])  # Assim conseguimos aceder ao valor do Serial/Slot/Resultado
 
-        test_finish = res_test['Final Result']
+        print('Slot' + res_test['Slot'])  # Assim conseguimos aceder ao valor do Serial/Slot/Resultado
 
 main()
