@@ -1,0 +1,130 @@
+Error	| SW Error	| Station			| Error Name			| Descrição							|
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ 0 	| 0 		| -				| No Error			| - 								|
+ 1	| 1		| Cal (uC)			| Protection Mode 		| Modo de Protecção (Calibração)				|
+ 2 	| 11 		| Cal (uC)			| Full Programming		| Programação do módulo (uC)					|
+ 3	| 12		| Cal (uC)			| TEC TX Calibration TimeOut	| Calibração com TEC Tx						|
+ 4	| 13		| Cal (uC)			| Burst TX Calibration TimeOut	| Calibração com ACC Tx						|
+ 5	| 14 		| Cal (uC)			| Tx Power Fault 		| Tx emite fora do canal operacional (Calibração)		|
+ 6 	| 12 		| Cal (uC)			| TEC CH Identification Fault	| Calibração com TEC Tx						|
+ 7 	| 13 		| Cal (uC)			| Burst CH Identification Fault	| Calibração com ACC Tx						|
+ 8 	| 19		| Cal (uC)			| Module TX State		| Falhou a mudar o estado do módulo (Calibração)		|
+ 9 	| 16		| Cal (uC)			| TEC TX Shift			| Shift do Tx falhou por timeout				|
+ 10     | 17		| Cal (uC)			| Tuning Time TX		| Tuning times Tx						|
+ 11     | 17		| Cal (uC)			| Tuning Time RX		| Tuning times Rx						|
+ 12     | 18		| Rx Cal Module (uC)		| RX Time Out Calibration	| Calibração do Rx falhou por timeout				|
+ 13     | 21		| Check Module 1 (uC)		| TEC TX			| TEC Tx fault							|
+ 14     | 22		| Check Module 1 (uC)		| Thermistor TX			| Thermistor Tx fault						|
+ 15     | 23		| Check Module 1 (uC)		| TEC RX			| TEC Tx fault							|
+ 16     | 24		| Check Module 1 (uC)		| Thermistor RX			| Thermistor Rx fault						|
+ 17     | 25		| Check Module 1 (uC)		| VAPD				| VAPD fault							|
+ 18     | 26		| Check Module 1 (uC)		| RSSI LOW			| RSSI fault							|
+ 19     | 26		| Check Module 1 (uC)		| RSSI HIGH			| RSSI fault							|
+ 20     | 26		| Check Module 1 (uC)		| RSSI LIM			| RSSI fault							|
+ 21     | 16		| Cal (uC)			| TEC TX Shift			| Shift do Tx fora do intervalo esperado			|
+ 22     | 27		| Check Module 1 (uC)		| Heater TX Idle		| ACC Tx fault (Idle)						|
+ 23     | 27		| Check Module 1 (uC)		| Heater TX Burst		| ACC Tx fault (Burst)						|
+ 24     | 28		| Check Module 1 (uC)		| Heater RX 			| ACC Rx fault							|
+ 25     | 29		| Check Module 1 (uC)		| Module Temperature		| Temperatura fora do intervalo esperado (MACOM)		|
+ 26     | 27		| Check Module 2 (uC)		| Acc Idle TX Control		| ACC Tx fault (Idle)						|
+ 27     | 27		| Check Module 2 (uC)		| Acc Burst TX Control		| ACC Tx fault (Burst)						|
+ 28     | 28		| Check Module 2 (uC)		| Acc RX Control		| ACC Rx fault							|
+ 29     | 27		| Check Module 2 (uC)		| Acc Idle TX Control High	| ACC Tx fault (Idle)						|
+ 30     | 28		| Check Module 2 (uC)		| Acc RX Control High		| ACC Rx fault							|
+ 31     | 21		| Check Module 2 (uC)		| TEC TX			| TEC Tx fault							|
+ 32     | 23		| Check Module 2 (uC)		| TEC RX			| TEC Rx fault							|
+ 33     | 22		| Check Module 2 (uC)		| Thermistor TX			| Thermistor Tx fault						|
+ 34     | 24		| Check Module 2 (uC)		| Thermistor RX			| Thermistor Rx fault						|
+ 35     | 25		| Check Module 2 (uC)		| APD High			| VAPD fault							|
+ 36     | 25		| Check Module 2 (uC)		| APD Control			| VAPD fault							|
+ 37     | 29		| Check Module 2 (uC)		| Macom Temperature		| Temperatura fora do intervalo esperado (MACOM)		|
+ 38     | 29		| Check Module 2 (uC)		| uC Temperature		| Temperatura fora do intervalo esperado (uC)			|
+ 39     | 26		| Check Module 2 (uC)		| RSSI				| RSSI fault							|
+ 40     | 26		| Check Module 2 (uC)		| RSSI High			| RSSI fault							|
+ 41     | 25		| Check Module 2 (uC)		| APD Vbr			| VAPD fault (Vbr)						|
+ 42     | 27		| Check Module 2 (uC)		| Acc Idle TX Resistence	| ACC Tx fault (Idle)						|
+ 43     | 28		| Check Module 2 (uC)		| Acc RX Resistence		| ACC Rx fault							|
+ 44     | 27		| Check Module 2 (uC)		| Acc Idle TX Low		| ACC Tx fault (Idle)						|
+ 45     | 28		| Check Module 2 (uC)		| Acc RX Low			| ACC Rx fault							|
+ 46     | 30		| Check Module 2 (uC)		| CheckSum Table 4		| CheckSum Table 4						|
+ 47     | 31		| Rx Cal Module 2 (uC)		| RX Calibration Fail 1		| Rx Calibration Fail 1						|
+ 48     | 32		| Rx Cal Module 2 (uC)		| RX Calibration Fail 2		| Rx Calibration Fail 2						|
+ 49     | 31		| Rx Cal Module 1 (uC)		| RX Calibration TEC RX		| Rx Calibration TEC						|
+ 50     | 32		| Rx Cal Module 1 (uC)		| RX Calibration ACC RX		| Rx Calibration ACC						|
+ 51     | 33		| Rx Cal Module 1 (uC)		| RX Calibration Tuning Times	| Rx Calibration Tuning Times					|
+ 52     | 34		| Rx Cal Module 1 (uC)		| TEC TX Fail			| Rx Calibration TEC						|
+ 53     | 35		| Rx Cal Module 1 (uC)		| TEC RX Fail			| Rx Calibration TEC						|
+ 54     | 36		| Rx Cal Module 1 (uC)		| Heater TX Fail		| Rx Calibration TEC						|
+ 55     | 37		| Rx Cal Module 1 (uC)		| Heater RX Fail		| Rx Calibration TEC						|
+ 56     | 38		| Rx Cal Module 1 (uC)		| RSSI APD Fail			| Rx Calibration APD						|
+ 57     | 39		| Rx Cal Module 1 (uC)		| RSSI Low			| Rx Calibration RSSI Low					|
+ 58     | 40		| Rx Cal Module 1 (uC)		| RSSI High			| Rx Calibration RSSI High					|
+ 59     | 41		| Rx Cal Module 1 (uC)		| RSSI Low Cycle		| Rx Calibration RSSI Low (Cycle)				|
+ 60     | 42		| Rx Cal Module 1 (uC)		| Cycle Operation		| Rx Calibration Cycle						|
+ 61     | 9		| Upstream/Downstream (Main uC)	| ERROR__FPGA0_CONNECTION	| Problemas na placa / setup					|
+ 62     | 9		| Upstream/Downstream (Main uC)	| ERROR__FPGA1_CONNECTION	| Problemas na placa / setup					|
+ 63     | 9		| Upstream/Downstream (Main uC)	| ERROR__UC0_CONNECTION		| Problemas na placa / setup					|
+ 64     | 9		| Upstream/Downstream (Main uC)	| ERROR__UC1_CONNECTION		| Problemas na placa / setup					|
+ 65     | 9		| Upstream/Downstream (Main uC)	| ERROR__UC2_CONNECTION		| Problemas na placa / setup					|
+ 66     | 9		| Upstream/Downstream (Main uC)	| ERROR__UC3_CONNECTION		| Problemas na placa / setup					|
+ 67     | 1		| Upstream/Downstream (Main uC)	| ERROR__PROTECTION_MODE	| Modo de Protecção (US/DS)					|
+ 68     | 4		| Downstream (Main uC)		| ERROR__DS_SENSITIVITY_CH1	| DS Sensibilidade						|
+ 69     | 4		| Downstream (Main uC)		| ERROR__DS_SENSITIVITY_CH2	| DS Sensibilidade						|
+ 70     | 4		| Downstream (Main uC)		| ERROR__DS_SENSITIVITY_CH3	| DS Sensibilidade						|
+ 71     | 4		| Downstream (Main uC)		| ERROR__DS_SENSITIVITY_CH4	| DS Sensibilidade						|
+ 72     | 3		| Downstream (Main uC)		| ERROR__DS_NO_LOCK_CH1		| DS Lock							|
+ 73     | 3		| Downstream (Main uC)		| ERROR__DS_NO_LOCK_CH2		| DS Lock							|
+ 74     | 3		| Downstream (Main uC)		| ERROR__DS_NO_LOCK_CH3		| DS Lock							|
+ 75     | 3		| Downstream (Main uC)		| ERROR__DS_NO_LOCK_CH4		| DS Lock							|
+ 76     | 2		| Upstream (Main uC)		| ERROR__US_TX_ERROR_CHANNEL	| Tx emite fora do canal operacional (US/DS)			|
+ 77     | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH1	| US Lock (B2B)							|
+ 78     | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH2	| US Lock (B2B)							|
+ 79     | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH3	| US Lock (B2B)							|
+ 80     | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH4	| US Lock (B2B)							|
+ 81     | 6		| Upstream (Main uC)		| ERROR__US_SENSITIVITY_CH1	| US Sensibilidade (B2B)					|
+ 82     | 6		| Upstream (Main uC)		| ERROR__US_SENSITIVITY_CH2	| US Sensibilidade (B2B)					|
+ 83     | 6		| Upstream (Main uC)		| ERROR__US_SENSITIVITY_CH3	| US Sensibilidade (B2B)					|
+ 84     | 6		| Upstream (Main uC)		| ERROR__US_SENSITIVITY_CH4	| US Sensibilidade (B2B)					|
+ 85     | 8		| Upstream (Main uC)		| ERROR__US_OPP_CH1 		| US Opp							|
+ 86     | 8		| Upstream (Main uC)		| ERROR__US_OPP_CH2 		| US Opp							|
+ 87     | 8		| Upstream (Main uC)		| ERROR__US_OPP_CH3 		| US Opp							|
+ 88     | 8		| Upstream (Main uC)		| ERROR__US_OPP_CH4 		| US Opp							|
+ 89     | 9		| Downstream (Main uC)		| ERROR__DS_POWER_NOT_STABLE	| Problemas na placa / setup					|
+ 90     | 7		| Upstream (Main uC)		| ERROR__TX_POWER_LOW		| Tx emite com baixa potência					|
+ 91     | 51		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_DS_BER	| Falhou BER no teste funcional (DS)				|
+ 92     | 52		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_US_BER	| Falhou BER no teste funcional (US)				|
+ 93     | 53		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_10G		| Espectro está instável a 10G					|
+ 94     | 54		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_BURST	| Espectro está instável em Burst				|
+ 95     | 50		| Functional Test (Main uC)	| ERROR__US_POWER_CONTROL	| Problemas na placa / setup					|
+ 96     | 58		| Rx Isolation (Main uC)| 	| ERROR__RX_CH_ISOLATION	| Falha de issolamento do Rx					|
+ 97     | 11		| Cal (uC)			| Code Programming		| Programação do módulo (uC)					|
+ 98     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
+ 99     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
+ 100    | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
+ 101    | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
+ 102    | 21		| Check Module 1 (uC) (VZ)	| TEC Tx			| TEC Tx fault (Protecção)					|
+ 103    | 23		| Check Module 1 (uC) (VZ)	| TEC Rx			| TEC Rx fault (Protecção)					|
+ 104    | 25		| Check Module 1 (uC) (VZ)	| APD				| APD fault (Protecção)						|
+ 105    | 29		| Check Module 1 (uC) (VZ)	| Temperature			| Module Temperature fault (Protecção)				|
+ 106    | 43		| Cal (uC)			| Module was removed (Mod ABS)	| Module was removed during calibration				|
+ 107    | 59		| Cal (uC)			| ERROR__FIBER_NOK		| Slot fiber is not ok						|
+ 108    | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH1	| US Lock (Fiber)						|
+ 109    | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH2	| US Lock (Fiber)						|
+ 110    | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH3	| US Lock (Fiber)						|
+ 111    | 5		| Upstream (Main uC)		| ERROR__US_GET_SENSITIVITY_CH4	| US Lock (Fiber)						|
+ 112    | 15		| Cal (uC)			| Calibration Temperature High	| Calibration temperature over 35ºC				|
+ 113    | 20		| Check Module(uC)(VZ)/Cal(uC)	| LOS Fault			| LOS PIN Fault							|
+ 114    | 9		| Calibration (1)(2)		| ERROR__SET_RX_POWER_CH2_22	| Problemas na placa / setup					|
+ 115    | 200		| -				| -				| -								|
+ 116    | 200		| -				| -				| -								|
+ 117    | 20		| Check Module (uC) (VZ)	| DDMI TX Power			| DDMI TX Power out of the limits 				|
+ 118    | 20		| Check Module (uC) (VZ)	| DDMI RX Power			| DDMI RX Power out of the limits				|
+ 119    | 20		| Check Module (uC) (VZ)	| VDD				| Power supply out of the limits				|
+ 120    | 20		| Check Module (uC) (VZ)	| TX Bias			| Bias Current out of the limits				|
+ 121    | 20		| Check Module (uC) (VZ)	| Module Status			| Module status not calibrated					|
+ 122    | 20		| Check Module (uC) (VZ)	| Status 1			| Control Status Byte 110 different from 0			|
+ 123    | 20		| Check Module (uC) (VZ)	| Status 2			| Control Status Byte 111 different from 0			|
+ 124    | 20		| Check Module (uC) (VZ)	| CheckSum			| Wrong CheckSum						|
+ 125    | 55 		| Cal (uC)			| TEC TX Fault			| Low RSSI, verify fiber					|
+ 126    | 56		| Cal (uC)			| TEC TX Fault			| Not emiting							|
+ 127    | 57		| Cal (uC)			| TEC TX Fault			| More than 2ºC of difference					|
