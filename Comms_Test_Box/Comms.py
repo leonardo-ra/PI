@@ -70,16 +70,14 @@ def TCP_command(msg):
 
 def main():
     # open the application
-    os.system('start .\SW_CalBoard\App.exe')
+    os.system('start .\Comms_Test_Box\SW_CalBoard\App.exe')
     time.sleep(2)
 
     # test connection to the application
     #print(TCP_command('17 B'))
-    f = open('strings.txt','w')
     # send TCP command ('1 A') Connect System
     #box_connect = "Successfully finished!\nModule A is ready to be used!" #"Module A: OLT CH1 not!\n Error code: 3"
     box_connect = TCP_command('1 B')
-    f.write('box connection:\n'+box_connect)
     while ('sucesso' not in box_connect):
         print(box_connect + 'Sending TCP command Connect System again\n')
         # maybe wait some time?
@@ -92,7 +90,6 @@ def main():
     #read_module = "Slot 1, Module A, Serial Number: 1014009530Slot 2, Module A, Serial Number: Not foundSlot 3, Module A, Serial Number: 1015001319Slot 4, Module A, Serial Number: 1015001342" 
     #read_module = "Slot 1, Module A, Serial Number: 1015001350\nSlot 2, Module A, Serial Number: 1015001356\nSlot 3, Module A, Serial Number: 1015001129\nSlot 4, Module A, Serial Number: 1015001319"
     read_module = TCP_command('2 B')
-    f.write('read module:\n'+read_module)
     while (('Erro' in read_module) or ('encontrado' in read_module)):# Se der erro, nenhum esta ligado, e no nosso caso acho que apenas nos interessa que estejam os quatro inseridos
         print(read_module + 'Sending TCP command Read Module again\n')
         time.sleep(10) # maybe wait some time? or send which slot is not found to the robot

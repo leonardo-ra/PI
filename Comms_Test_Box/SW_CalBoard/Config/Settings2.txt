@@ -96,7 +96,7 @@ Error	| SW Error	| Station			| Error Name			| Descrição							|
  93     | 53		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_10G		| Espectro está instável a 10G					|
  94     | 54		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_BURST	| Espectro está instável em Burst				|
  95     | 50		| Functional Test (Main uC)	| ERROR__US_POWER_CONTROL	| Problemas na placa / setup					|
- 96     | 58		| Rx Isolation (Main uC)| 	| ERROR__RX_CH_ISOLATION	| Falha de issolamento do Rx					|
+ 96     | 58		| Rx Isolation (Main uC) 	| ERROR__RX_CH_ISOLATION	| Falha de issolamento do Rx					|
  97     | 11		| Cal (uC)			| Code Programming		| Programação do módulo (uC)					|
  98     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
  99     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
