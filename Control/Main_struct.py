@@ -60,23 +60,24 @@ while ROBOT Program:
         ✓ moveJ
          ✓   xfp_position
      ✓ else
+       ✓ Grip_Release(37)  #to make sure its open
        ✓ xfp_position = poseTrans(plane_camera, p[xfp_data[1]/1000, xfp_data[2]/1000, 0, 0, 0, xfp_data[3]]) #lowers the arm to be within reach of the XFP
         ✓    moveJ
          ✓     xfp_position  #moves the arm to the translated pose
        ✓ Grip(0)
-         moveJ
-            #Waypoint_suporte para pousar o xfp
-         Release(37mm)
-         if(xfp_side == 1) # Meaning XFP is 'front'
+       ✓ xfp_position = poseTrans(plane_camera, p[xfp_data[1]/1000, xfp_data[2]/1000, -0.19, 0, 0, xfp_data[3]]) #raises the arm from the place where the xpf was
+       ✓  moveJ
+        ✓    #Waypoint_levantado
+        ✓    #Waypoint_suporte para pousar o xfp ## MAY REQUIRE ADJUSTMENTS
+        ✓ Release(37mm)
+        ✓ if(xfp_side == 1) # Meaning XFP is 'front'
             moveJ
-               #Waypoint_toGrabFromEnd
+               #Waypoint_toGrabFromEnd 
             Grip(0)
             moveJ
                #Waypoint_TestBoxPOV
-        elif(xfp_side == 2) # Meaning XFP is 'back'
-            moveJ
-               #Waypoint_toGrabFromEnd
-            subprogram(TurnXFP) #Subprogram has Grip(0), and Waypoint_TestBoxPOV inside
+        ✓ elif(xfp_side == 2) # Meaning XFP is 'back'
+           ✓ subprogram(TurnXFP) #Subprogram grabs XFP from the rear, and moves Waypoint_TestBoxPOV
         
          send_trigger("Find_Free_Port") #Takes photo of the box and calulates free port
          Location_of_port = input_from_computer(find_free_port)
