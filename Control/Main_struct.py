@@ -71,13 +71,10 @@ while ROBOT Program:
         ✓    #Waypoint_suporte para pousar o xfp ## MAY REQUIRE ADJUSTMENTS
         ✓ Release(37mm)
         ✓ if(xfp_side == 1) # Meaning XFP is 'front'
-            moveJ
-               #Waypoint_toGrabFromEnd 
-            Grip(0)
-            moveJ
-               #Waypoint_TestBoxPOV
+           ✓ subprogram(Grab_XFP_To_testbox)x
         ✓ elif(xfp_side == 2) # Meaning XFP is 'back'
            ✓ subprogram(TurnXFP) #Subprogram grabs XFP from the rear, and moves Waypoint_TestBoxPOV
+               # nao esta a funcionar bem, estamos a usar uma versao mais beta
         
          send_trigger("Find_Free_Port") #Takes photo of the box and calulates free port
          Location_of_port = input_from_computer(find_free_port)
