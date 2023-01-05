@@ -1,7 +1,0 @@
-box connection:
-Terminado com sucesso!
-Placa B est? pronta a ser usada!read module:
-Slot 1, Placa B, Serial Number: 4102000012
-Slot 2, Placa B, Serial Number: 4102000015
-Slot 3, Placa B, Serial Number: 4102000014
-Slot 4, Placa B, Serial Number: 4102000013
