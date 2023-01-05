@@ -15,4 +15,4 @@
 - [ ] Create Test Box operating plane in polyscope
 - [ ] XFP detection Debug
 - [ ] XFP lock/unlock polyscope program
-- [ ] Test Box communication
+- [x] Test Box communication
