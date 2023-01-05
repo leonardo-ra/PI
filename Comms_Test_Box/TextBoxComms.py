@@ -60,7 +60,7 @@ def TCP_command(msg):
     recv = msgReceived.decode()         # decode message
     return recv
 
-def main(language = 'Portuguese'):
+def run(language = 'Portuguese'):
     # get language
     with open('Comms_Test_Box/language.json', 'r') as f:
         lang = json.load(f)
