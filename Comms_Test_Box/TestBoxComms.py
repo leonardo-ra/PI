@@ -29,23 +29,24 @@ import json
 
 # tratar da string do comando 4
 #1string_example = "Serial Number: 1015001350 Part Number: PAN2XUXSSA3I Slot: 1 Module: A Start date: 12/09/2022 Start time: 10:06:57 End date: 12/09/2022 End time: 10:13:27 Software version (tester): v1.12 Firmware version (tester): v1.45 Temperature (tester): 35 XFP firmware version: v10.87 XFP power consumption: 2.47 DDMI Tx Power: 7.8 DDMI Rx Power: -16.5 DDMI Tx Bias Current: 37.75 DDMI Temperature: 37 DDMI Vcc: 3.25 Tx Power CH1: 8.78 Tx Power CH2: 8.82 Tx Power CH3: 8.42 Tx Power CH4: 7.02 Step 1 PASS/FAIL: PASS Step 2 PASS/FAIL: PASS Step 3 PASS/FAIL: PASS Step 4 PASS/FAIL: PASS Step 5 PASS/FAIL: PASS Step 6 PASS/FAIL: PASS Error Code: - Final Result:     "
-#string_example = "Serial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 1\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: PASS\r\n\r\nSerial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 2\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: PASS"
+string_example = "Serial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 1\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: PASS\r\n\r\nSerial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 2\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: FAIL"
 #3string_example = '{"Serial Number": "1015001350", "Part Number": "PAN2XUXSSA3I", "Slot": "1", "Module": "A", "Start date": "12/09/2022"}'
 
 # Creating a dictionary
 def test_result(example):
     xfp4 = []
+    slots = {}
     exe = example.split('\r\n\r\n')
-    print(exe)
+    #print(exe)
     for i in range(2):
         ex = exe[i].split('\r\n')        # dividir a string por parametro
         serial  = ex[0].split(':')      # posição do serial number
         slot    = ex[2].split(':')      # posição do slot
         result  = ex[29].split(':')     # posição do Resultado do teste
         xfp_stat = [serial, slot, result]    # here, we have a list of lists
-        xfp4.append(dict(xfp_stat))
-        
-    return xfp4 #dict(xfp_stat)   # returns in dictionary format
+        xfp4.append(dict(xfp_stat))     # list of dictionaries
+        slots['Slot '+str(i+1)] = xfp4[i]['Final Result'].strip()   # only slot and result, the strip removes a space, not needed
+    return xfp4, slots #dict(xfp_stat)   # returns in dictionary format
 
 def TCP_command(msg):
     # make connection with app
@@ -56,7 +57,7 @@ def TCP_command(msg):
     echoClient.connect((HOST, PORT))    # connect with app
 
     echoClient.send(msg.encode())       # send message
-    msgReceived = echoClient.recv(4096)#256)  # receive message
+    msgReceived = echoClient.recv(4096) # receive message
     recv = msgReceived.decode()         # decode message
     return recv
 
@@ -78,8 +79,8 @@ def run(language = 'Portuguese'):
 
     # test connection to the application
     # send TCP command ('1 A') Connect System
-    #box_connect = "Terminado com sucesso fully finished!\nModule A is ready to be used!" #"Module A: OLT CH1 not!\n Error code: 3"
-    box_connect = TCP_command('1 B')
+    box_connect = "Terminado com sucesso fully finished!\nModule A is ready to be used!" #"Module A: OLT CH1 not!\n Error code: 3"
+    #box_connect = TCP_command('1 B')
     while (stringTCP1 not in box_connect):
         print(box_connect + 'Sending TCP command Connect System again\n')
         # maybe wait some time?
@@ -90,8 +91,8 @@ def run(language = 'Portuguese'):
     # send TCP command ('2 A') Read Modules
     #read_module = "Erro: Module A is not connected!"
     #read_module = "Slot 1, Module A, Serial Number: 1014009530Slot 2, Module A, Serial Number: nao encontrado Not foundSlot 3, Module A, Serial Number: 1015001319Slot 4, Module A, Serial Number: 1015001342" 
-    #read_module = "Slot 1, Module A, Serial Number: 1015001350\nSlot 2, Module A, Serial Number: 1015001356\nSlot 3, Module A, Serial Number: 1015001129\nSlot 4, Module A, Serial Number: 1015001319"
-    read_module = TCP_command('2 B')
+    read_module = "Slot 1, Module A, Serial Number: 1015001350\nSlot 2, Module A, Serial Number: 1015001356\nSlot 3, Module A, Serial Number: 1015001129\nSlot 4, Module A, Serial Number: 1015001319"
+    #read_module = TCP_command('2 B')
     while ((stringTCP2[0] in read_module) or (stringTCP2[1] in read_module)):# Se der erro, nenhum esta ligado, e no nosso caso acho que apenas nos interessa que estejam os quatro inseridos
         print(read_module + 'Sending TCP command Read Module again\n')
         time.sleep(10) # maybe wait some time? or send which slot is not found to the robot
@@ -100,9 +101,9 @@ def run(language = 'Portuguese'):
 
     # send TCP command ('3 A') Start Test
     #start_test = "Error: Module A is not connected!" 
-    #start_test = "Iniciou com sucesso Successfully started!Testing is running in background..."
-    time.sleep(10)
-    start_test = TCP_command('3 B')
+    start_test = "Iniciou com sucesso Successfully started!Testing is running in background..."
+    #time.sleep(10)
+    #start_test = TCP_command('3 B')
     while (stringTCP3 not in start_test):
         print(start_test + 'Sending TCP command Start Test again\n')
         # diria que aqui os erros que podem dar dependem dos commandos anteriores, por isso ou vai atras enviar os outros comandos, 
@@ -111,20 +112,21 @@ def run(language = 'Portuguese'):
     print(start_test)
 
     # send TCP command ('4 A') Tracking Results
-    time.sleep(10)
-    tracking = TCP_command('4 B')
+    #time.sleep(10)
+    #tracking = TCP_command('4 B')
     
-    res_test = test_result(tracking)  # mudar para tracking
+    res_test,slot = test_result(string_example)# tracking)  # mudar para tracking
     #print(res_test)
     
     # ATENÇÃO: a string virá com 4 slots, separados por \n\n
     while (res_test[0][stringTCP4] == ' -'):  # 
         # wait some time
-        time.sleep(30) # 2 min       
+        time.sleep(120) # 2 min       
         tracking = TCP_command('4 B')
-        print(tracking)
-        res_test = test_result(tracking)  # mudar para tracking
+        #print(tracking)
+        res_test, slot = test_result(tracking)  # mudar para tracking
 
-    print(res_test)
+    print(res_test,'\n', slot)
+    return slot, res_test
 
 #main()
