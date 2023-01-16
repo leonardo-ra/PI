@@ -1,6 +1,6 @@
 # Project Instruction Manual (PRISM):
 
-####This manual serves as a basic setup to run the UR5e Robot system in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
+#### This manual serves as a basic setup to run the UR5e Robot system in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
 
 ### On your machine:  
 
