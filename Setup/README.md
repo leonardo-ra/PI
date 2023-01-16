@@ -4,7 +4,7 @@
 
 ### On your machine:  
 
-**Step 1:** On a **Windows** based operating system, start by installing git, running the following comand on your terminal:  
+**Step 1:** On a **Windows** operating system, start by installing git, running the following comand on your terminal:  
 
 `pip install git`  
 
