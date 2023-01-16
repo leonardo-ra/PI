@@ -1,8 +1,10 @@
 # Project Instruction Manual (PRISM):
 
+####This manual serves as a basic setup to run the UR5e Robot system in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
+
 ### On your machine:  
 
-**Step 1:** On a **Linux** based operating system, start by installing git, running the following comand on your terminal:  
+**Step 1:** On a **Windows** based operating system, start by installing git, running the following comand on your terminal:  
 
 `pip install git`  
 
