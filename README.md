@@ -1,6 +1,6 @@
 # Industrial Project 
 
-### Current Phase: Construction II
+### Current Phase: Transition
 
 #### Status:
 
