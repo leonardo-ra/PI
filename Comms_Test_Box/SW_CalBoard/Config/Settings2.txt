@@ -96,7 +96,7 @@ Error	| SW Error	| Station			| Error Name			| Descrição							|
  93     | 53		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_10G		| Espectro está instável a 10G					|
  94     | 54		| Functional Test (Main uC)	| ERROR__FUNCTIONAL_BURST	| Espectro está instável em Burst				|
  95     | 50		| Functional Test (Main uC)	| ERROR__US_POWER_CONTROL	| Problemas na placa / setup					|
- 96     | 58		| Rx Isolation (Main uC)| 	| ERROR__RX_CH_ISOLATION	| Falha de issolamento do Rx					|
+ 96     | 58		| Rx Isolation (Main uC) 	| ERROR__RX_CH_ISOLATION	| Falha de issolamento do Rx					|
  97     | 11		| Cal (uC)			| Code Programming		| Programação do módulo (uC)					|
  98     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
  99     | 10		| DDMI Cal (Main uC)		| DDMI error (Module 2)		| DDMI error							|
@@ -115,7 +115,7 @@ Error	| SW Error	| Station			| Error Name			| Descrição							|
  112    | 15		| Cal (uC)			| Calibration Temperature High	| Calibration temperature over 35ºC				|
  113    | 20		| Check Module(uC)(VZ)/Cal(uC)	| LOS Fault			| LOS PIN Fault							|
  114    | 9		| Calibration (1)(2)		| ERROR__SET_RX_POWER_CH2_22	| Problemas na placa / setup					|
- 115    | 200		| -				| -				| -								|
+ 115    | 9		| Calibration (1)		| ERROR__NO_IDENTIFIED_ISSUE	| Foi lido FAIL, com erro a null (possivel problema de I2C)	|
  116    | 200		| -				| -				| -								|
  117    | 20		| Check Module (uC) (VZ)	| DDMI TX Power			| DDMI TX Power out of the limits 				|
  118    | 20		| Check Module (uC) (VZ)	| DDMI RX Power			| DDMI RX Power out of the limits				|
