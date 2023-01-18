@@ -59,7 +59,7 @@ def TCP_command(msg):
     recv = msgReceived.decode()         # decode message
     return recv
 
-def run(language = 'Portuguese', resultCheck = 1, module = 'A'):
+def run(language = 'Portuguese', resultCheck = 'init', module = 'A'):
     # get language
     with open('Comms_Test_Box/language.json', 'r') as f:
         lang = json.load(f)
@@ -72,10 +72,9 @@ def run(language = 'Portuguese', resultCheck = 1, module = 'A'):
     stringTCP4 = languages[3]    # rever
     dummy = {'Slot 1':None,'Slot 2':None,'Slot 3':None,'Slot 4':None,}
     trans = False
+    if resultCheck == 'init':
     # open the application
-    os.system('start .\Comms_Test_Box\SW_CalBoard\App.exe')
-    time.sleep(2)
-    if resultCheck == 0:
+        os.system('start .\Comms_Test_Box\SW_CalBoard\App.exe')
         # test connection to the application
         # send TCP command ('1 A') Connect System
         #box_connect = "Terminado com sucesso fully finished!\nModule A is ready to be used!" #"Module A: OLT CH1 not!\n Error code: 3"
@@ -85,8 +84,10 @@ def run(language = 'Portuguese', resultCheck = 1, module = 'A'):
             # maybe wait some time?
             time.sleep(10)
             box_connect = TCP_command('1 '+module)
-        print(box_connect)
-        
+        print("Connection done")
+        return dummy,None,trans
+    elif resultCheck == 'start':
+        print("Checking...")
         # send TCP command ('2 A') Read Modules
         #read_module = "Erro: Module A is not connected!"
         #read_module = "Slot 1, Module A, Serial Number: 1014009530\r\nSlot 2, Module A, Serial Number: nao encontrado Not found\r\nSlot 3, Module A, Serial Number: 1015001319\r\nSlot 4, Module A, Serial Number: 1015001342" 
@@ -135,7 +136,7 @@ def run(language = 'Portuguese', resultCheck = 1, module = 'A'):
         #print(res_test,'\n', slot)
         return slot, res_test, trans
 
-    elif resultCheck == 1:
+    elif resultCheck == 'check':
         trans = True
         #1string_example = "Serial Number: 1015001350 Part Number: PAN2XUXSSA3I Slot: 1 Module: A Start date: 12/09/2022 Start time: 10:06:57 End date: 12/09/2022 End time: 10:13:27 Software version (tester): v1.12 Firmware version (tester): v1.45 Temperature (tester): 35 XFP firmware version: v10.87 XFP power consumption: 2.47 DDMI Tx Power: 7.8 DDMI Rx Power: -16.5 DDMI Tx Bias Current: 37.75 DDMI Temperature: 37 DDMI Vcc: 3.25 Tx Power CH1: 8.78 Tx Power CH2: 8.82 Tx Power CH3: 8.42 Tx Power CH4: 7.02 Step 1 PASS/FAIL: PASS Step 2 PASS/FAIL: PASS Step 3 PASS/FAIL: PASS Step 4 PASS/FAIL: PASS Step 5 PASS/FAIL: PASS Step 6 PASS/FAIL: PASS Error Code: - Final Result:     "
         #string_example = "Serial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 1\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: -\r\n\r\nSerial Number: 1015001350\r\nPart Number: PAN2XUXSSA3I\r\nSlot: 2\r\nModule: A\r\nStart date: 12/09/2022\r\nStart time: 10:06:57\r\nEnd date: 12/09/2022\r\nEnd time: 10:13:27\r\nSoftware version (tester): v1.12\r\nFirmware version (tester): v1.45\r\nTemperature (tester): 35\r\nXFP firmware version: v10.87\r\nXFP power consumption: 2.47\r\nDDMI Tx Power: 7.8\r\nDDMI Rx Power: -16.5\r\nDDMI Tx Bias Current: 37.75\r\nDDMI Temperature: 37\r\nDDMI Vcc: 3.25\r\nTx Power CH1: 8.78\r\nTx Power CH2: 8.82\r\nTx Power CH3: 8.42\r\nTx Power CH4: 7.02\r\nStep 1 PASS/FAIL: PASS\r\nStep 2 PASS/FAIL: PASS\r\nStep 3 PASS/FAIL: PASS\r\nStep 4 PASS/FAIL: PASS\r\nStep 5 PASS/FAIL: PASS\r\nStep 6 PASS/FAIL: PASS\r\nError Code: -\r\nFinal Result: -"
