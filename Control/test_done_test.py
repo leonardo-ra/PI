@@ -49,8 +49,8 @@ else:
 
 print("Starting program")
 
-def getResults(Check = 0):
-    slotRes, info, transceivers = Tbox.run(resultCheck = Check)  # ao chamar isto, o pc passa a comunicar com a caixa de testes, e só sai daqui quando os testes terminam todos.
+def getResults(BoxCom = 'init'):
+    slotRes, info, transceivers = Tbox.run(resultCheck = BoxCom)  # ao chamar isto, o pc passa a comunicar com a caixa de testes, e só sai daqui quando os testes terminam todos.
     # portanto, se isto termina é porque test done. entao podemos enviar diretamente o slot e o resultado
     if (info == 'TESTS RUNNING') or (info == 'TRANSCEIVERS MISSING'):
         info = 0
@@ -58,7 +58,7 @@ def getResults(Check = 0):
     else:
         info = 1
     # transforma o resultado no formato 1 ou 0
-        for i in range(2):
+        for i in range(4):
             if slotRes['Slot '+str(i+1)] == 'PASS':
                 slotRes['Slot '+str(i+1)] = 1
             elif slotRes['Slot '+str(i+1)] == 'FAIL':
@@ -70,6 +70,8 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind((HOST, PORT))      # Bind to the port  
 s.listen()              # Wait for client connection
 c, addr = s.accept()    # Establish connection with client
+
+getResults(BoxCom='init')
 
 i=1 # for test purposes
 j=1
@@ -84,11 +86,11 @@ while True:
             print(f"Received: {msg}")
             if msg == "test done?":
                 if transceivers == False:
-                    print("SOME Transceivers missing")
-                    result, tdone, transceivers = getResults(Check = 0)
+                    #print("SOME Transceivers missing")
+                    result, tdone, transceivers = getResults(BoxCom = 'start')
                 else:
                     print("ALL Transceivers Inserted")
-                    result, tdone, transceivers = getResults(Check = 1)
+                    result, tdone, transceivers = getResults(BoxCom = 'check')
                 
                 # envia um para indicar que um teste acabou
 
@@ -104,8 +106,8 @@ while True:
                 print(slotn)
 
                 if i == 1:
-                    result, tdone, transceivers = getResults(Check = 1)
-                    tuplo = (36,12.56,result[slotn])
+                    result, tdone, transceivers = getResults(BoxCom = 'check')
+                    tuplo = (36,12.57,result[slotn])
                 elif i == 2:
                     tuplo = (86,12.56,result[slotn])
                 elif i == 3:
@@ -117,12 +119,14 @@ while True:
                 string2 = string.encode()
                 c.send(string2)  #mandar o X, Y e o resultado do teste 1 para OK e 2 para NOK
                 print("Sent "+string)
-                i = (i+1)%4
                 print("i = " +str(i))
+                i = i+1
 
             elif msg == 'take xfp photo':
+                sleep(2)
                 ret, frame = cam.read()
                 assert ret # check if we got a frame
+                
                 # frame_undistorted = Calculate_camera_points.undistor_image(frame, calibration_file)     # Undistor the image we want to analyse
                 detector = Extract_points_of_yolo.XFP(frame, model)                                     # Create a new object to identify XFPs
                 center_x, center_y, angle_rad, info = detector()
@@ -140,7 +144,8 @@ while True:
                 # Indice 0 is for when we identified more than one XFP, only catch the first one
                 if center_x == []: # It means yolo couldn't find any device
                     print("Couldn't find anything with yolo")
-                    string = str(7)
+                    tuplo = ()
+                    string = str(tuplo)
                     string = string.encode()
                     c.send(string)
                     # Robot should move a bit to the side or something
@@ -151,6 +156,11 @@ while True:
                     string = string.encode()
                     c.send(string)
                     print(f"Sent: {tuplo}")
+                cam.release()
+                cam = cv2.VideoCapture(capture_index, cv2.CAP_DSHOW)    #Create video stream
+                if not cam.isOpened():
+                    cam.release()
+                    cam =  cv2.VideoCapture(capture_index, cv2.CAP_DSHOW)    #Create video stream
             elif msg == 'find_free_port':
                 if j == 1:
                     tuplo = (36,12.56)
@@ -165,7 +175,11 @@ while True:
                 string2 = string.encode()
                 c.send(string2)  #mandar o X, Y e o resultado do teste 1 para OK e 2 para NOK
                 print("Sent "+string)
-                j = (j+1)%4
+                j = j+1
+            if i == 5:
+               i=1
+            if j == 5:
+                j=1
                 #time.sleep(1)
         else:
             print(f"! Polyscope program was stopped ! Ctrl+C on the terminal, Reboot the system")
