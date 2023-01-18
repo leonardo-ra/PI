@@ -73,7 +73,8 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 9:** Turning the Robot on. After booting up the teach pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power Off* button, on the bottom-left corner.
 
-![Alt text](../../../../Downloads/Step9.jpg)
+![](https://user-images.githubusercontent.com/94324481/213317182-5cc400c3-d07f-4835-af4f-762138f56941.jpg)
+
 
 **Step 10:** In the welcome menu, press the *Load Program* Icon. You should see a program called **Polyscop_main.urp**, load it by opening the program.  
 
