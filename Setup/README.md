@@ -1,26 +1,40 @@
 # Project Instruction Manual (PRISM):
 
-#### This manual serves as a basic setup to run the UR5e Robot system in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
+##### This manual serves as a basic step-by-step setup to run the UR5e Robot system, in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
 
 ### On your machine:  
 
-**Step 1:** On a **Windows** operating system, start by installing git, running the following comand on your terminal:  
+**Step 1:** On a **Windows** OS, start by checking if you have python installed. Open your cmd terminal and type:
 
-`pip install git`  
+`python --version`
 
-**Step 2:** Copy the SSH key of this repository and clone it to your machine. You can do so by running this command as well:  
+If you don't have Python installed in your system, you can download it [here](https://www.python.org/)
 
-`git clone git@github.com:leonardo-ra/PI.git`  
+**Step 2:** Installing PIP using cURL in Python. On the cmd terminal type:
 
-**Step 3:** After cloning this repo, start by installing the required libraries. In the *Setup* directory run:  
+`curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` 
+
+followed by:
+
+`python get-pip.py`
+
+to make sure PIP was installed correctly, you can type:
+
+`pip --version`
+
+**Step 3:** Downloading the project onto your machine. You can visit our repository [here](https://github.com/leonardo-ra/PI) and download the project files via ZIP on the *< > Code* button.
+Alternatively, you can install git and later clone this repository. If you wish to do so, you can follow this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+
+**Step 4:** Installing the required libraries. After downloading and extracting the files (or cloning the repo), open your cmd terminal and go to the project's *Setup* directory. Run the following command:   
 
 `pip install -r requirements.txt` 
 
-Your setup on the terminal should be good to go. :white_check_mark:
+:white_check_mark: The setup on the terminal should be good to go. :white_check_mark:
 
-**Step 4:** Connect the Ethernet cable to your machine's Ethernet port - it should also work by using an Ethernet/USB adaptor.
+**Step 5:** Connect the Ethernet cable on the Robot to your PC's Ethernet port - it should also work by using an Ethernet/USB adaptor.
 
-**Step 5:** In your network settings, make sure the Ethernet connection is set up with a ***static*** IPV4 IP address:  
+**Step 6:** Got to Windows' *Control Pannel*. In your network settings, make sure the Ethernet connection is set up with a ***static*** IPV4 IP address:  
 
 **Por imagem**  
 
