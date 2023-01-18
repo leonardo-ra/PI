@@ -34,7 +34,7 @@ Alternatively, you can install git and later clone this repository. If you wish 
 
 **Step 5:** Connect the Ethernet cable on the Robot to your PC's Ethernet port - it should also work by using an Ethernet/USB adaptor.
 
-**Step 6:** Got to Windows' *Control Pannel*. In your network settings, make sure the Ethernet connection is set up with a ***static*** IPV4 IP address:  
+**Step 6:** Got to *Control Panel*. In your network settings, make sure the Ethernet connection is set up with a ***static*** IPV4 IP address:  
 
 **Por imagem**  
 
