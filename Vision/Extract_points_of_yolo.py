@@ -142,24 +142,31 @@ class XFP:
             frame_aux = self.frame[inf[2]:inf[4], inf[1]:inf[3]] # img [y:y+h, x:x+w]
             if inf[0] == "XFP_back":
                 hsv = cv2.cvtColor(frame_aux, cv2.COLOR_BGR2HSV)
-                # Threshold of green in HSV space
-                lower_green = np.array([35, 60, 140])
-                upper_green = np.array([255, 180, 255])
+                # Define range of green color in HSV
+                lower_green = np.array([30, 50, 30])
+                upper_green = np.array([100, 255, 100])
                 # preparing the mask to overlay
                 mask = cv2.inRange(hsv, lower_green, upper_green)
-                # The black region in the mask has the value of 0,
-                # so when multiplied with original image removes all non-blue regions
-                result = cv2.bitwise_and(frame_aux, frame_aux, mask = mask)
-                cropped_img = result[int(result.shape[0]/2):int(result.shape[0])] # Cropp the bottom half of the result to check if contains the green part
-                if np.average(result) > 0.2:    # if there is green in the image
-                    if np.average(cropped_img) > 0.2 :
-                        info_2.append([inf[0], "bottow_half"])
-                    else:
-                        info_2.append([inf[0], "top_half"])
+                
+                # Split image into top half and bottom half
+                height, width = frame_aux.shape[:2]
+                top_half = mask[0:height//2, 0:width]
+                bottom_half = mask[height//2:height, 0:width]
+
+                # Count non-zero pixels in top half and bottom half
+                top_half_non_zero = cv2.countNonZero(top_half)
+                bottom_half_non_zero = cv2.countNonZero(bottom_half)
+
+                # Check in which half the green part is located
+                if top_half_non_zero > bottom_half_non_zero:
+                    info_2.append([inf[0], "top_half"])
+                else:
+                    info_2.append([inf[0], "bottom_half"])
+
             elif inf[0] == "XFP_front":
                 gray = cv2.cvtColor(frame_aux,cv2.COLOR_BGR2GRAY)
                 # Apply binary thresholding
-                _, thresh = cv2.threshold(gray, 110, 255, cv2.THRESH_BINARY)
+                _, thresh = cv2.threshold(gray, 80, 255, cv2.THRESH_BINARY)
                 # Detect the contours on the binary image using cv2.CHAIN_APPROX_NONE
                 contours, _ = cv2.findContours(image=thresh, mode=cv2.RETR_TREE, method=cv2.CHAIN_APPROX_NONE) 
                 copy_frame = frame_aux.copy()
@@ -174,17 +181,28 @@ class XFP:
                 secondlargestcontour = sorteddata[1][1]
                 cv2.drawContours(copy_frame, secondlargestcontour, -1, (255,0,0), 3)
                 hsv = cv2.cvtColor(copy_frame, cv2.COLOR_BGR2HSV)
-                # Threshold of blue in HSV space
-                lower_blue = np.array([60, 35, 140])
-                upper_blue = np.array([180, 255, 255])
-                # preparing the mask to overlay
+
+                # Define range of blue color in HSV
+                lower_blue = np.array([110,50,50])
+                upper_blue = np.array([130,255,255])
+
+                # Threshold the HSV image to get only blue colors
                 mask = cv2.inRange(hsv, lower_blue, upper_blue)
-                result = cv2.bitwise_and(copy_frame, copy_frame, mask = mask)
-                cropped_img = result[int(result.shape[0]/2):int(result.shape[0])] # Cropp the bottom half of the result to check if contains the green part
-                if np.average(cropped_img) > 0.2 :
+
+                # Split image into top half and bottom half
+                height, width = copy_frame.shape[:2]
+                top_half = mask[0:height//2, 0:width]
+                bottom_half = mask[height//2:height, 0:width]
+
+                # Count non-zero pixels in top half and bottom half
+                top_half_non_zero = cv2.countNonZero(top_half)
+                bottom_half_non_zero = cv2.countNonZero(bottom_half)
+
+                # Check in which half the blue part is located
+                if top_half_non_zero > bottom_half_non_zero:
                     info_2.append([inf[0], "top_half"])
                 else:
-                    info_2.append([inf[0], "bottow_half"])
+                    info_2.append([inf[0], "bottom_half"])
 
         return info_2
 
@@ -197,7 +215,6 @@ class XFP:
         results = self.score_frame(frame)
         labels, coord = results
         frame = self.plot_boxes(results, frame)
-
         info = []
         x_shape, y_shape = frame.shape[1], frame.shape[0]
         for i in range(len(labels)):
@@ -217,7 +234,29 @@ class XFP:
         cv2.imshow("Yolo", frame)
         cv2.waitKey(1000)
         for count, list in enumerate(info):
-            if (list[1] == "top_half" and list[0] == "XFP_front") or (list[1] == "top_half" and list[0] == "XFP_back"):
+            if (list[1] == "top_half" and list[0] == "XFP_front") or (list[1] == "bottom_half" and list[0] == "XFP_back"):
                 angle_rad[count] = angle_rad[count] - math.pi
 
+        cv2.destroyAllWindows()
         return  center_x, center_y, angle_rad, info
+
+# def load_model():
+#     model = torch.hub.load(r'C:\Users\User\Desktop\PIC\PIC\Grupo Vasco\Final\yolov5', 'custom', path=r'C:\Users\User\Desktop\PIC\PIC\Grupo Vasco\Final\yolov5\models\best (1).pt', source='local')
+#     return model
+
+
+# model = load_model()
+# capture_index = 1   # Index of camera we want to acess
+# cam = cv2.VideoCapture(capture_index, cv2.CAP_DSHOW)    #Create video stream
+# cam.set(cv2.CAP_PROP_AUTOFOCUS, 0)  #Turn the autofocus off
+# cam.set(3, 1280)
+# cam.set(4, 720)
+# cam.set(cv2.CAP_PROP_FPS, 60)
+# ret, frame = cam.read()
+# assert ret # check if we got a frame
+# detector = XFP(frame, model)                                    # Create a new object to identify XFPs
+# center_x, center_y, angle_rad, info = detector()
+# print('info:' +str(info))                                       # Use the call function of the object
+
+
+
