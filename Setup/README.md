@@ -23,14 +23,14 @@ followed by:
 to make sure PIP was installed correctly, you can type:
 
     pip --version
-    
+
 **Step 3:** Downloading the project onto your machine. You can visit our repository [here](https://github.com/leonardo-ra/PI) and download the project files via ZIP on the *< > Code* button.
 Alternatively, you can install git and later clone this repository. If you wish to do so, you can follow this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 
 **Step 4:** Installing the required libraries. After downloading and extracting the files (or cloning the repo), open your cmd terminal and go to the project's *Setup* directory. Run the following command:   
 
-`pip install -r requirements.txt` 
+    pip install -r requirements.txt 
 
 :white_check_mark: The terminal setup should be good to go. :white_check_mark:
 
@@ -104,7 +104,7 @@ You can set the remaining parameters as '0.0.0.0'.
 
 There are two fields that should be changed in this program, in acordance with the previous steps:
 
-> HOST = 192.1.1.2
+```HOST = 192.1.1.2```
 
 This must match the IP chosen in the previous steps (6 & 12).
 
@@ -112,7 +112,7 @@ This must match the IP chosen in the previous steps (6 & 12).
 
 This bit of code is inside the *load_model* function. The path to the project files/cloned repo should be edited to their location in your PC. If you donwloaded them to your Desktop, it should read somethine like this for example:
 
-`model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
+    model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
 
 Save the edited **NOME DO PROGRAMA FINAL.py VER NA LINHA DE CIMA TAMBÉM!**.
 
@@ -131,7 +131,7 @@ You can now turn the TestBox on.
 
 **2** - Whilst the Polyscope_main.urp is running on the teaching Pendant, you can run **NOME DO PROGRAMA FINAL.py** on your terminal. To do so you can type this:
 
-`python3 NOME DO PRGRAMA FINAL.py`
+    python3 NOME DO PRGRAMA FINAL.py
 
 :white_check_mark: The program should be running! :white_check_mark:
 
@@ -224,13 +224,18 @@ Press Ctrl+C, and the program should stop.
 
 ## Contacts
 
-Leonardo Rodrigues: `leonardo.r@ua.pt`
+Leonardo Rodrigues:
+    leonardo.r@ua.pt
 **Não sei se querem também os vossos?**
-Vasco Fernandes: ``
-Pedro Carvalho: ``
-Nuno Domingues: ``
-João Cordeiro: ``
-João Esteves: ``
+Vasco Fernandes:
+    x
+Pedro Carvalho:
+    x
+Nuno Domingues: 
+    x
+João Cordeiro: 
+    x
+João Esteves: 
 
 **Posso tirar a quote se acharem que fica estúpido...**
 
