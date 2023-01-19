@@ -1,18 +1,9 @@
-# Industrial Project 
+# roboPtics - Robotic arms in an Optics Production Line
 
-### Current Phase: Transition
+> A project within the purview of University of Aveiro's course subject: Projeto Industrial.  The subject gives a group of students the opportunity to work with well-established companies, within the Electrical Engineering field. As pitched by PICadvanced S.A. at the time, the objective consisted of integrating vision in a robotic arm (an UR5e), to further increase the automation and output of their production line.
+This git repository details the developments made by the team of six students who tackled this project.
 
-#### Status:
+##If your are now continuing our work, make sure take a look at our [PRISM](https://github.com/leonardo-ra/PI/tree/main/Setup) first and foremost!
 
-![100%](https://progress-bar.dev/80)
-
-- [x] Established communication with Robot Arm 
-- [x] *Roboflow* vision recognition
-- [X] 3D Printed mount for the camera
-- [x] YOLO XFP detection implementation (Test with dataset missing)
-- [ ] YOLO Test Box detection implementation
-- [X] Create Test Box dataset (take pictures)
-- [X] Create Test Box operating plane in polyscope
-- [ ] XFP detection Debug
-- [X] XFP lock/unlock polyscope program
-- [x] Test Box communication
+#Future Work:
+### Things we wish we could've done, and other important details.
