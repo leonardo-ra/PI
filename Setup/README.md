@@ -28,7 +28,7 @@ to make sure PIP was installed correctly, you can type:
 Alternatively, you can install git and later clone this repository. If you wish to do so, you can follow this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 
-**Step 4:** Installing the required libraries. After downloading and extracting the files (or cloning the repo), open your cmd terminal and go to the project's *Setup* directory. Run the following command:   
+**Step 4:** Installing the required libraries. After downloading and extracting the files (or cloning the repo), open your cmd terminal and go to the project's *Setup* directory. In this directory, run the following command:   
 
     pip install -r requirements.txt 
 
@@ -36,28 +36,28 @@ Alternatively, you can install git and later clone this repository. If you wish 
 
 **Step 5:** Connect the UR5e's Ethernet cable to your PC's Ethernet port - it should also work on a USB port, by using an Ethernet/USB adaptor.
 
-**Step 6:** Setting a static IP address. Got to Windows *Control Panel* > *Network and Internet* > *Network and Sharing Center*.You should see an Unknown Ethernet connection. Click on the Ethernet icon. You should now see the connection status tab:
+**Step 6:** Setting a static IP address. Got to Windows *Control Panel* > *Network and Internet* > *Network and Sharing Center*. You should see an "Unknown" Ethernet connection. Click on the Ethernet icon. You should now see the connection status tab:
 
 **POR IMAGEM** 
 
-Go to *Properties* > double-click *Internet Protocol Version 4 (TCP/IPv4)*. You should see the IPV4 properties tab:
+Go to *Properties* > (double-click) *Internet Protocol Version 4 (TCP/IPv4)*. You should see the IPV4 properties tab:
 
 **POR IMAGEM**
 
-Tick the option *Use the following IP address:* and fill the parameters with these (optional) numbers:
+Tick the option "*Use the following IP address:*" and fill in the parameters with these (optional) values:
 
  **POR IMAGEM**
 
-***NOTE:*** The IP address should be on the same network as the Robot i.e:
+***NOTE:*** The IP address should be on the same network as the UR5e i.e:
  - If you set your Robot's IP address with: 192.1.1.1 ; submask: 255.255.255.0 ; Gateway: 192.1.1.1  
 
  - Your machine's Ethernet connection should be something like: 192.1.1.**2** ; submask: 255.255.255.0 ; Gateway: 192.1.1.**2**
 
- ***The Robot's IP address setup will be answered further below.***
+(The Robot's IP address setup will be answered further below.)
 
  Apply and save your changes before closing the tabs.
 
-**Step 7:** Disabling the firewall. This step ensures the connection is well established between the UR5e and your PC.
+**Step 7:** Disabling the firewall. This step ensures that the connection is well established between the UR5e and your PC.
 Go to *Control Panel* > *System and Security* > *Windows Defender Firewall*:
 
 **POR IMAGEM**
@@ -67,11 +67,11 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 **POR IMAGEM** 
 
 
-**Step 8:** Connect the camera to your PC via USB Type C or USB type A (using the adaptor).
+**Step 8:** Connect the camera to your PC via USB Type C or USB type A (using an adaptor).
 
 **Step 9:** Connect the TestBox to your PC via USB type A. Do not turn it on yet though.
 
-:white_check_mark: Your UR5e-PC connection should be set now :white_check_mark:
+:white_check_mark: Your PC connection should be set now :white_check_mark:
 
 ### On the Ur5e teaching Pendant (Tablet):  
 
@@ -84,13 +84,12 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **POR IMAGEM**
 
-**Step 12:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab -> *Network* tab, and set the Robot's IP address, submask and gateway. Press apply.
+**Step 12:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab > *Network* tab, and set the Robot's IP address, submask and gateway. You can set the remaining parameters as '0.0.0.0'. Press apply.
 
-***NOTE:*** Make sure these three fields match the instructions in step 6.  
+***NOTE:*** Make sure thse three fields match the instructions in step 6.
 
-**POR IMAGEM**  
+**POR IMAGEM**
 
-You can set the remaining parameters as '0.0.0.0'. 
 
 **Step 13:** Press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - if it doesn't, switch to *Local Control*.
 
@@ -102,34 +101,38 @@ You can set the remaining parameters as '0.0.0.0'.
 
 **POR IMAGEM do editor**
 
-There are two fields that should be changed in this program, in acordance with the previous steps:
+There are two lines of code in this program, that should be edited in acordance with the previous steps:
 
-```HOST = 192.1.1.2```
+1:
+    HOST = 192.1.1.2
 
-This must match the IP chosen in the previous steps (6 & 12).
+This line of code must match the IP chosen for your PC connection in the previous steps (6 & 12).
 
+2:
 > model = torch.hub.load(r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5', 'custom', path=r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5\models\best (1).pt', source='local')
 
-This bit of code is inside the *load_model* function. The path to the project files/cloned repo should be edited to their location in your PC. If you donwloaded them to your Desktop, it should read somethine like this for example:
+This bit of code is inside the *load_model* function. The path to the project's files/cloned repo should be edited to their location in your computer. If you donwloaded them to your Desktop, it should read somethine like this for example:
 
     model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
 
-Save the edited **NOME DO PROGRAMA FINAL.py VER NA LINHA DE CIMA TAMBÉM!**.
+Save the edited **NOME DO PROGRAMA FINAL.py EDITAR AS LINHA DE CIMA TAMBÉM!**.
 
-**Step 15:** Verifying the TestBox. The project was tested using 'TestBox A', however before you can turn on the TestBox, make sure you check which one it is.
+**Step 15:** Verifying the TestBox. The system assumes its using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
 
 **POR AS COISAS QUE TÊM DE MUDAR NO PROGRAMA (SE É A CAIXA 'A', 'B', 'C'...) CASO SEJA PRECISO MUDAR**
 
 You can now turn the TestBox on.
 
-**Step 16:** Booting sequence. After the previous steps were taken, your system should be fully connected, with both the UR5e and the TestBox running. The booting sequence of operations is as follows:
+**Step 16:** Starting sequence. After the previous steps were taken, your system should be fully connected, with both the UR5e and the TestBox loaded/turned on. The starting sequence is as follows:
 
-**1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the program loaded. Press the *play* icon on the bottom of the screen, and *Start from beginning*. 
+**1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen, and *Start from beginning*. 
 
-(The program should now be trying to connect via socket to our PC)
+**POR IMAGEM**
+
+(The program should now be trying to connect via socket to your PC. You can see the higlighted blue text as it is running.)
 
 
-**2** - Whilst the Polyscope_main.urp is running on the teaching Pendant, you can run **NOME DO PROGRAMA FINAL.py** on your terminal. To do so you can type this:
+**2** - Whilst the Polyscope_main.urp is running on the teaching Pendant, you can run **NOME DO PROGRAMA FINAL.py** on your terminal by typing this:
 
     python3 NOME DO PRGRAMA FINAL.py
 
@@ -137,69 +140,75 @@ You can now turn the TestBox on.
 
 ## Behaviour 
 
-Once the system is running, one of several prints that will appear on your terminal will be this one:
+Once the system is running, several control messages will appear on your terminal window, one of which will be this one:
 
 > Do you wish to do Calibration? (Y/N)
 
-Pressing Y,y or enter on this section, will have the system calibrate itself using previously taken photos of the working surface. **Acrescentar ou remover**
+Pressing Y, y or enter, will have the system calibrate itself using previously taken photos of the working surface. **Acrescentar ou remover**
 
-Later, a big TestBox Control App should pop out. This App will show you the status of the test box and its transceivers. This window should be put to the side/minimised (not closed!).
+Afterwards, a big TestBox Control App should pop out. This App will show you the status of the test box and its transceivers. This window should be put to the side/minimised (not closed!).
 
-Afterwards, the system should print out its control/status messages in real time, without needing any further input from the user.
+Next, the system should print out its control/status messages in real time, without needing any further input from the user.
 
 #### How the system works, in a nutshell -
 
-**1** - The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
+- **1** - The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
 
-**2** - The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordenates back to the arm.
+- **2** - The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordenates back to the arm.
 
-**3** - The arm moves to the apropriate location, and proceeds acording to the teaching Pendant instructions.
+- **3** - The arm moves to the apropriate location, and proceeds acording to the teaching Pendant instructions.
 
-**4** - The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points **2** and **3** repeat).
+- **4** - The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points **2** and **3** repeat).
 
-**5** - The arm inserts the transceiver and their respective fiber optic cable in a previously detected port - point **4**.
+- **5** - The arm inserts the transceiver and their respective fiber optic cable in a previously detected port - sent by point **4**.
 
-**6** - Repeat from **1** to **5** until all slots inserted.
+- **6** - The system repeats this from **1** to **5** until all the ports on the TextBox are filled by transceivers.
 
-**7** - Once all the transceivers are inserted in the TestBox, as well as their respective optical fibers, a test begins. This test is run independently on the TestBox and its status can be seen in the TestBox Controll window.
-***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the latter ones get halted. This is an important aspect to keep in mind when shutting down/reseting the system.
+- **7** - Once all the transceivers are inserted in the TestBox, as well as their respective optical fibers, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Controll window.
 
-**8** - Whilst the test is running in the background, the process repeats itself until it can no longer find a transceiver.
+***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/reseting the system.
 
-**9** - If a test is complete, the TestBox sends a signal and the arm proceeds to point **4** to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, acording to its respective test result.
+- **8** - Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point **1**. 
 
-**10** - Afterwards, the system goes back to Point **1** and repeats itself.
+- **9** - If a test is complete, the TestBox sends a signal and the arm proceeds to point **4** to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, acording to its respective test result (OK or Not OK).
+
+- **10** - Afterwards, if all the transceivers are removed, the system loops back to Point **1**.
 
 
 #### Some common errors/issues and troubleshooting:
 
-**a)** The script freezes on *Starting program*: this issue usually occurs when the system wasn't inicialised in the correct order (Pendant 1st, script 2nd), or the Ethernet cable isn't connected and the system can't perform the socket connection. **Solution** - Kill the terminal and reset the system, making sure everything is connected.
+- **a)** The script freezes on 
+> Starting program
 
-**b)** **ADICIONAR O ERRO DE TCP QUANDO SE FECHA A APLICAÇÃO DA PIC** 
+This issue usually occurs when the system wasn't inicialised in the correct order (Pendant 1st, script 2nd), or the Ethernet cable isn't connected and the system can't perform the socket connection. **Solution** - Kill the terminal and reset the system, making sure everything is connected.
 
-**c)** **ADICIONAR O ERRO DA CÂMARA N TAR LIGADA**
+- **b)** **ADICIONAR O ERRO DE TCP QUANDO SE FECHA A APLICAÇÃO DA PIC** 
 
-**d)** **Adicionar eventualmente mais algum erro que seja mais comum.**
+- **c)** **ADICIONAR O ERRO DA CÂMARA N TAR LIGADA**
+
+- **d)** **Adicionar eventualmente mais algum erro que seja mais comum.**
 
 ## Turning off/Reseting the system
 
 ### On the teaching pendant:
 
-**Step 1:** Stop the teaching Pendant program by pressing the *stop* icon next to the *play* one.
+**Step 1:** Stop the teaching Pendant program by pressing the *stop* icon next to *play*.
 
 **Step 2:** On the terminal, a message reading:
 
 > ! Polyscope program was stopped ! Ctrl+C on the terminal, Reboot the system
 
-Press Ctrl+C, and the program should stop.
+should appear. Proceed as instructed by pressing Ctrl+C, and the program should stop.
 
-**Step 3a:** If the TestBox is not performing any tests, close the TestBox Controll window.
+**Step 3 (a):** If the TestBox is not performing any tests, close the TestBox Controll window.
 
-**Step 3b:** If a test is currently running on the TestBox, wait till its completion before closing the TestBox Controll window.
+**Step 3 (b):** If a test is currently running on the TestBox, wait for its completion before closing the TestBox Controll window.
 
-**Step 4:** Restart the system in the aforementioned order (**Step 16:** Booting Sequence).
+***NOTE:*** This prevents bugs/erroneous behaviour from the system, once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off in the middle of a test is not recommended either.
 
-***NOTE:*** This prevents bugs/erroneous behaviour from the system, once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off whilst it is running a test is not recommended either.
+:white_check_mark: At this point the system should cease running completely :white_check_mark:
+
+**Step 4:** Restart the system in the aforementioned order (**Step 16:** Starting Sequence).
 
 ## Reference Material and other Manuals
 
@@ -226,17 +235,24 @@ Press Ctrl+C, and the program should stop.
 
 Leonardo Rodrigues:
     leonardo.r@ua.pt
-**Não sei se querem também os vossos?**
+
 Vasco Fernandes:
     x
+
 Pedro Carvalho:
     x
+
 Nuno Domingues: 
     x
+
 João Cordeiro: 
     x
-João Esteves: 
 
-**Posso tirar a quote se acharem que fica estúpido...**
+João Esteves: 
+    x
+
+**Não sei se querem também os vossos?**
 
 >This project was only possible thanks to the environment provided by the brilliant team at PICadvanced, as well as engineers: Pedro Silva, Francisco Rodrigues and Professor Mário Lima.
+
+**Posso tirar a quote se acharem que fica estúpido...**
