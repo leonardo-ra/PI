@@ -1,5 +1,4 @@
-# Project Instruction Manual (PRISM): 
-A step-by-step guide to run our system from scratch.
+# Project Instruction Manual (PRISM): a step-by-step guide to run our system from scratch.
 
 ## The Setup (Computer, UR5e Robotic Arm & Transceiver TestBox)
 
