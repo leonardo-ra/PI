@@ -1,10 +1,16 @@
+# roboPtics - Robotic arms in an Optics Production Line
+
+> A project within the purview of University of Aveiro's course subject: Projeto Industrial.  The subject gives a group of students the oportunity to work with well established companies, within the Eletrical Engineering field. As pitched by PICadvanced S.A. at the time, the objective consisted of integrating vision in a robotic arm (an UR5e), to further increase the automation and output of their production line. 
+
+> This git repository details the developments made by the team of six students who tackled this project.
+
 # Project Instruction Manual (PRISM):
 
-##### This manual serves as a basic step-by-step setup to run the UR5e Robot system, in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
+##### This manual serves as a basic step-by-step guide to run the aforementioned system from scratch. 
 
-## The Setup 
+## The Setup (Computer, UR5e Robotic Arm & Transceiver TestBox)
 
-### On your machine:  
+### On your Computer:  
 
 **Step 1:** On a *Windows 10* OS, start by checking if you have python installed. Open your cmd terminal and type:
 
@@ -146,7 +152,7 @@ Once the system is running, several control messages will appear on your termina
 
 Pressing Y, y or enter, will have the system calibrate itself using previously taken photos of the working surface. **Acrescentar ou remover**
 
-Afterwards, a big TestBox Control App should pop out. This App will show you the status of the test box and its transceivers. This window should be put to the side/minimised (not closed!).
+Afterwards, a big TestBox Control App should pop out. This App will show you the status of the TestBox and its transceivers. This window should be put to the side or minimised, not closed!
 
 Next, the system should print out its control/status messages in real time, without needing any further input from the user.
 
@@ -194,15 +200,19 @@ This issue usually occurs when the system wasn't inicialised in the correct orde
 
 **Step 1:** Stop the teaching Pendant program by pressing the *stop* icon next to *play*.
 
+### On your Computer:
+
 **Step 2:** On the terminal, a message reading:
 
 > ! Polyscope program was stopped ! Ctrl+C on the terminal, Reboot the system
 
 should appear. Proceed as instructed by pressing Ctrl+C, and the program should stop.
 
-**Step 3 (a):** If the TestBox is not performing any tests, close the TestBox Controll window.
+**Step 3:** 
 
-**Step 3 (b):** If a test is currently running on the TestBox, wait for its completion before closing the TestBox Controll window.
+- **a)** If the TestBox is not performing any tests, close the TestBox Controll window.
+
+- **b):** If a test is currently running on the TestBox, wait for its completion before closing the TestBox Controll window.
 
 ***NOTE:*** This prevents bugs/erroneous behaviour from the system, once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off in the middle of a test is not recommended either.
 
@@ -253,6 +263,6 @@ João Esteves:
 
 **Não sei se querem também os vossos?**
 
->This project was only possible thanks to the environment provided by the brilliant team at PICadvanced, as well as engineers: Pedro Silva, Francisco Rodrigues and Professor Mário Lima.
+>This project was only possible thanks to the environment provided by the brilliant team at PICadvanced, as well as engineers: Pedro Silva & Francisco Rodrigues, alongside Professor Mário Lima.
 
 **Posso tirar a quote se acharem que fica estúpido...**
