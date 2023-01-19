@@ -141,7 +141,7 @@ You can now turn the TestBox on.
 
 :white_check_mark: The program should be running! :white_check_mark:
 
-## Behaviour 
+## The Behaviour (What will the system do?)
 
 Once the system is running, several control messages will appear on your terminal window, one of which will be this one:
 
@@ -155,27 +155,27 @@ Next, the system should print out its control/status messages in real time, with
 
 #### How the system works, in a nutshell -
 
-- **1** - The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
+- 1) The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
 
-- **2** - The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordenates back to the arm.
+- 2)  The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordenates back to the arm.
 
-- **3** - The arm moves to the apropriate location, and proceeds acording to the teaching Pendant instructions.
+- 3)  The arm moves to the apropriate location, and proceeds acording to the teaching Pendant instructions.
 
-- **4** - The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points **2** and **3** repeat).
+- 4)  The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points (2) and (3) repeat).
 
-- **5** - The arm inserts the transceiver and their respective fiber optic cable in a previously detected port - sent by point **4**.
+- 5)  The arm inserts the transceiver and their respective fiber optic cable in a previously detected port - sent by point (4).
 
-- **6** - The system repeats this from **1** to **5** until all the ports on the TextBox are filled by transceivers.
+- 6)  The system repeats this from (1) to (5) until all the ports on the TextBox are filled by transceivers.
 
-- **7** - Once all the transceivers are inserted in the TestBox, as well as their respective optical fibers, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Controll window.
+- 7)  Once all the transceivers are inserted in the TestBox, as well as their respective optical fibers, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Controll window.
 
 ***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/reseting the system.
 
-- **8** - Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point **1**. 
+- 8) Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point **1**. 
 
-- **9** - If a test is complete, the TestBox sends a signal and the arm proceeds to point **4** to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, acording to its respective test result (OK or Not OK).
+- 9) If a test is complete, the TestBox sends a signal and the arm proceeds to point (4) to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, acording to its respective test result (OK or Not OK).
 
-- **10** - Afterwards, if all the transceivers are removed, the system loops back to Point **1**.
+- 10) Afterwards, if all the transceivers are removed, the system loops back to point (1).
 
 
 #### Some common errors/issues and troubleshooting:
