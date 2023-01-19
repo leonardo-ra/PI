@@ -65,12 +65,11 @@ Tick the option "*Use the following IP address:*" and fill in the parameters wit
 **Step 7:** Disabling the firewall. This step ensures that the connection is well established between the UR5e and your PC.
 Go to *Control Panel* > *System and Security* > *Windows Defender Firewall*:
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213371426-ec0315e0-3648-41cb-b071-5352a083d2ca.png)
 
 Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Firewall (not recommended)* on both types of network settings (Private and Public):
-
-**POR IMAGEM** 
-
+ 
+![](https://user-images.githubusercontent.com/94324481/213372114-67e5c09d-bd2f-4c0f-b7a9-f18f5a001317.png)
 
 **Step 8:** Connect the camera to your PC via USB Type C or USB type A (using an adaptor).
 
@@ -82,19 +81,17 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 10:** Turning the Robot on. After booting up the teaching Pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power off* button, on the bottom-left corner.
 
-![](https://user-images.githubusercontent.com/94324481/213317182-5cc400c3-d07f-4835-af4f-762138f56941.jpg)
-
+![](https://user-images.githubusercontent.com/94324481/213373266-7e36d5fd-c0c5-476e-bc3d-f26a0e29375f.png)
 
 **Step 11:** In the welcome menu, press the blue *Load Program* Icon. You should see a program called **Polyscope_main.urp**, load it by opening the program.  
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213373812-064f7821-58c9-46d5-aa30-ed5cbc14d2da.png)
 
 **Step 12:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab > *Network* tab, and set the Robot's IP address, submask and gateway. You can set the remaining parameters as '0.0.0.0'. Press apply.
 
 ***NOTE:*** Make sure thse three fields match the instructions in step 6.
 
-**POR IMAGEM**
-
+![](https://user-images.githubusercontent.com/94324481/213375458-0198e3ac-3dec-4d27-93d3-6bd40245b09c.png)
 
 **Step 13:** Press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - if it doesn't, switch to *Local Control*.
 
@@ -104,7 +101,7 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**NOME DO PROGRAMA FINAL.py**". Start by opening that program in a code editor.
 
-**POR IMAGEM do editor**
+**POR IMAGEM do editor final**
 
 There are two lines of code in this program, that should be edited in acordance with the previous steps:
 
@@ -132,7 +129,8 @@ You can now turn the TestBox on.
 
 **1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen, and *Start from beginning*. 
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213376574-17fb8877-3ac6-4421-9348-9a875e18816a.png)
+
 
 (The program should now be trying to connect via socket to your PC. You can see the higlighted blue text as it is running.)
 
