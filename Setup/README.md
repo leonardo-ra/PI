@@ -24,7 +24,7 @@ to make sure PIP was installed correctly, you can type:
 
     pip --version
 
-**Step 3:** Downloading the project onto your machine. You can visit our repository [here](https://github.com/leonardo-ra/PI) and download the project files via ZIP on the *< > Code* button.
+**Step 3:** Downloading the project onto your machine. You can visit our repository [here](https://github.com/leonardo-ra/PI) and download the project's files via ZIP on the *"< > Code"* button.
 Alternatively, you can install git and later clone this repository. If you wish to do so, you can follow this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 
