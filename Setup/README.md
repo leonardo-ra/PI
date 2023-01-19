@@ -2,7 +2,7 @@
 
 ##### This manual serves as a basic step-by-step setup to run the UR5e Robot system, in conjunction with your PC, in order to perform the various autonomous tasks (inserting/removing, locating and testing of transceivers) required by PICadvanced.
 
-## The Setup - 
+## The Setup 
 
 ### On your machine:  
 
@@ -135,7 +135,7 @@ You can now turn the TestBox on.
 
 :white_check_mark: The program should be running! :white_check_mark:
 
-## Behaviour - 
+## Behaviour 
 
 Once the system is running, one of several prints that will appear on your terminal will be this one:
 
@@ -181,7 +181,7 @@ Afterwards, the system should print out its control/status messages in real time
 
 **d)** **Adicionar eventualmente mais algum erro que seja mais comum.**
 
-## Turning off/Reseting the system -
+## Turning off/Reseting the system
 
 ### On the teaching pendant:
 
@@ -201,7 +201,7 @@ Press Ctrl+C, and the program should stop.
 
 ***NOTE:*** This prevents bugs/erroneous behaviour from the system, once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off whilst it is running a test is not recommended either.
 
-## Reference Material and other Manuals:
+## Reference Material and other Manuals
 
 **Universal Robots:** 
 - [TCP/IP Connections](https://www.universal-robots.com/articles/ur/interface-communication/tcpip-socket-communication-via-urscript/)
@@ -222,7 +222,7 @@ Press Ctrl+C, and the program should stop.
 - ...
 - ...
 
-## Contacts:
+## Contacts
 
 Leonardo Rodrigues: `leonardo.r@ua.pt`
 **Não sei se querem também os vossos?**
