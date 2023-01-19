@@ -1,12 +1,11 @@
 # roboPtics - Robotic arms in an Optics Production Line
 
 > A project within the purview of University of Aveiro's course subject: Projeto Industrial.  The subject gives a group of students the oportunity to work with well established companies, within the Eletrical Engineering field. As pitched by PICadvanced S.A. at the time, the objective consisted of integrating vision in a robotic arm (an UR5e), to further increase the automation and output of their production line. 
-
-> This git repository details the developments made by the team of six students who tackled this project.
+This git repository details the developments made by the team of six students who tackled this project.
 
 # Project Instruction Manual (PRISM):
 
-##### This manual serves as a basic step-by-step guide to run the aforementioned system from scratch. 
+#### This manual serves as a basic step-by-step guide to run the aforementioned system from scratch. 
 
 ## The Setup (Computer, UR5e Robotic Arm & Transceiver TestBox)
 
