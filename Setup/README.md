@@ -1,11 +1,4 @@
-# roboPtics - Robotic arms in an Optics Production Line
-
-> A project within the purview of University of Aveiro's course subject: Projeto Industrial.  The subject gives a group of students the oportunity to work with well established companies, within the eletrical engineering and telecomunications fields. As pitched by PICadvanced S.A. at the time, the objective consisted of integrating vision in a robotic arm (an UR5e), to further increase the automation and output of their production line.
-This git repository details the developments made by the team of six students who tackled this project. 
-
-> This manual serves as a basic step-by-step guide to run the system from scratch.
-
-# Project Instruction Manual (PRISM): 
+# Project Instruction Manual (PRISM): a step-by-step guide to run our project from scratch.
 
 ## The Setup (Computer, UR5e Robotic Arm & Transceiver TestBox)
 
@@ -41,7 +34,7 @@ Alternatively, you can install git and later clone this repository. If you wish 
 
 **Step 5:** Connect the UR5e's Ethernet cable to your PC's Ethernet port - it should also work on a USB port, by using an Ethernet/USB adaptor.
 
-**Step 6:** Setting a static IP address. Got to Windows *Control Panel* > *Network and Internet* > *Network and Sharing Center*. You should see an "Unknown" Ethernet connection. Click on the Ethernet icon. You should now see the connection status tab:
+**Step 6:** Setting a static IP address. Got to Windows *Control Panel* > *Network and Internet* > *Network and Sharing Centre*. You should see an "Unknown" Ethernet connection. Click on the Ethernet icon. You should now see the connection status tab:
 
 **POR IMAGEM** 
 
@@ -65,12 +58,11 @@ Tick the option "*Use the following IP address:*" and fill in the parameters wit
 **Step 7:** Disabling the firewall. This step ensures that the connection is well established between the UR5e and your PC.
 Go to *Control Panel* > *System and Security* > *Windows Defender Firewall*:
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213371426-ec0315e0-3648-41cb-b071-5352a083d2ca.png)
 
 Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Firewall (not recommended)* on both types of network settings (Private and Public):
-
-**POR IMAGEM** 
-
+ 
+![](https://user-images.githubusercontent.com/94324481/213372114-67e5c09d-bd2f-4c0f-b7a9-f18f5a001317.png)
 
 **Step 8:** Connect the camera to your PC via USB Type C or USB type A (using an adaptor).
 
@@ -82,19 +74,17 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 10:** Turning the Robot on. After booting up the teaching Pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power off* button, on the bottom-left corner.
 
-![](https://user-images.githubusercontent.com/94324481/213317182-5cc400c3-d07f-4835-af4f-762138f56941.jpg)
-
+![](https://user-images.githubusercontent.com/94324481/213373266-7e36d5fd-c0c5-476e-bc3d-f26a0e29375f.png)
 
 **Step 11:** In the welcome menu, press the blue *Load Program* Icon. You should see a program called **Polyscope_main.urp**, load it by opening the program.  
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213373812-064f7821-58c9-46d5-aa30-ed5cbc14d2da.png)
 
 **Step 12:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab > *Network* tab, and set the Robot's IP address, submask and gateway. You can set the remaining parameters as '0.0.0.0'. Press apply.
 
-***NOTE:*** Make sure thse three fields match the instructions in step 6.
+***NOTE:*** Make sure these three fields match the instructions in step 6.
 
-**POR IMAGEM**
-
+![](https://user-images.githubusercontent.com/94324481/213375458-0198e3ac-3dec-4d27-93d3-6bd40245b09c.png)
 
 **Step 13:** Press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - if it doesn't, switch to *Local Control*.
 
@@ -104,9 +94,9 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**NOME DO PROGRAMA FINAL.py**". Start by opening that program in a code editor.
 
-**POR IMAGEM do editor**
+**POR IMAGEM do editor final**
 
-There are two lines of code in this program, that should be edited in acordance with the previous steps:
+There are two lines of code in this program, that should be edited in accordance with the previous steps:
 
 1:
     HOST = 192.1.1.2
@@ -116,13 +106,13 @@ This line of code must match the IP chosen for your PC connection in the previou
 2:
 > model = torch.hub.load(r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5', 'custom', path=r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5\models\best (1).pt', source='local')
 
-This bit of code is inside the *load_model* function. The path to the project's files/cloned repo should be edited to their location in your computer. If you donwloaded them to your Desktop, it should read somethine like this for example:
+This bit of code is inside the *load_model* function. The path to the project's files/cloned repo should be edited to their location in your computer. If you downloaded them to your Desktop, it should read something like this for example:
 
     model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
 
 Save the edited **NOME DO PROGRAMA FINAL.py EDITAR AS LINHA DE CIMA TAMBÉM!**.
 
-**Step 15:** Verifying the TestBox. The system assumes its using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
+**Step 15:** Verifying the TestBox. The system assumes it's using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
 
 **POR AS COISAS QUE TÊM DE MUDAR NO PROGRAMA (SE É A CAIXA 'A', 'B', 'C'...) CASO SEJA PRECISO MUDAR**
 
@@ -130,11 +120,12 @@ You can now turn the TestBox on.
 
 **Step 16:** Starting sequence. After the previous steps were taken, your system should be fully connected, with both the UR5e and the TestBox loaded/turned on. The starting sequence is as follows:
 
-**1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen, and *Start from beginning*. 
+**1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen and *Start from beginning*. 
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213376574-17fb8877-3ac6-4421-9348-9a875e18816a.png)
 
-(The program should now be trying to connect via socket to your PC. You can see the higlighted blue text as it is running.)
+
+(The program should now be trying to connect via socket to your PC. You can see the highlighted blue text as it is running.)
 
 
 **2** - Whilst the Polyscope_main.urp is running on the teaching Pendant, you can run **NOME DO PROGRAMA FINAL.py** on your terminal by typing this:
@@ -143,7 +134,7 @@ You can now turn the TestBox on.
 
 :white_check_mark: The program should be running! :white_check_mark:
 
-## Behaviour 
+## The Behaviour (What will the system do?)
 
 Once the system is running, several control messages will appear on your terminal window, one of which will be this one:
 
@@ -157,27 +148,27 @@ Next, the system should print out its control/status messages in real time, with
 
 #### How the system works, in a nutshell -
 
-- **1** - The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
+ 1) The arm moves to a top-view position, the camera takes a snapshot and sends it to the computer.
 
-- **2** - The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordenates back to the arm.
+ 2)  The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordinates back to the arm.
 
-- **3** - The arm moves to the apropriate location, and proceeds acording to the teaching Pendant instructions.
+ 3)  The arm moves to the appropriate location, and proceeds according to the teaching Pendant instructions.
 
-- **4** - The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points **2** and **3** repeat).
+ 4)  The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points (2) and (3) repeat).
 
-- **5** - The arm inserts the transceiver and their respective fiber optic cable in a previously detected port - sent by point **4**.
+ 5)  The arm inserts the transceiver and their respective fibre optic cable in a previously detected port - sent by point (4).
 
-- **6** - The system repeats this from **1** to **5** until all the ports on the TextBox are filled by transceivers.
+ 6)  The system repeats this from (1) to (5) until all the ports on the TextBox are filled by transceivers.
 
-- **7** - Once all the transceivers are inserted in the TestBox, as well as their respective optical fibers, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Controll window.
+ 7)  Once all the transceivers are inserted in the TestBox, as well as their respective optical fibres, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Control window.
 
-***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/reseting the system.
+***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/resetting the system.
 
-- **8** - Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point **1**. 
+ 8) Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point (1). 
 
-- **9** - If a test is complete, the TestBox sends a signal and the arm proceeds to point **4** to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, acording to its respective test result (OK or Not OK).
+ 9) If a test is complete, the TestBox sends a signal and the arm proceeds to point (4) to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, according to its respective test result (OK or Not OK).
 
-- **10** - Afterwards, if all the transceivers are removed, the system loops back to Point **1**.
+ 10) Afterwards, if all the transceivers are removed, the system loops back to point (1).
 
 
 #### Some common errors/issues and troubleshooting:
@@ -185,7 +176,7 @@ Next, the system should print out its control/status messages in real time, with
 - **a)** The script freezes on 
 > Starting program
 
-This issue usually occurs when the system wasn't inicialised in the correct order (Pendant 1st, script 2nd), or the Ethernet cable isn't connected and the system can't perform the socket connection. **Solution** - Kill the terminal and reset the system, making sure everything is connected.
+This issue usually occurs when the system wasn't initialised in the correct order (Pendant 1st, script 2nd), or the Ethernet cable isn't connected and the system can't perform the socket connection. **Solution** - Kill the terminal and reset the system, making sure everything is connected.
 
 - **b)** **ADICIONAR O ERRO DE TCP QUANDO SE FECHA A APLICAÇÃO DA PIC** 
 
@@ -193,7 +184,7 @@ This issue usually occurs when the system wasn't inicialised in the correct orde
 
 - **d)** **Adicionar eventualmente mais algum erro que seja mais comum.**
 
-## Turning off/Reseting the system
+## Turning off/Resetting the system
 
 ### On the teaching pendant:
 
@@ -209,15 +200,15 @@ should appear. Proceed as instructed by pressing Ctrl+C, and the program should 
 
 **Step 3:** 
 
-- **a)** If the TestBox is not performing any tests, close the TestBox Controll window.
+- **a)** If the TestBox is not performing any tests, close the TestBox Control window.
 
-- **b):** If a test is currently running on the TestBox, wait for its completion before closing the TestBox Controll window.
+- **b):** If a test is currently running on the TestBox, wait for its completion before closing the TestBox Control window.
 
-***NOTE:*** This prevents bugs/erroneous behaviour from the system, once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off in the middle of a test is not recommended either.
+***NOTE:*** This prevents bugs/erroneous behaviour from the system once it is rebooted. It bears mentioning as well, that although not fatal, turning the TestBox off in the middle of a test is not recommended either.
 
 :white_check_mark: At this point the system should cease running completely :white_check_mark:
 
-**Step 4:** Restart the system in the aforementioned order (**Step 16:** Starting Sequence).
+**Step 4:** Restart the system in the previously mentioned order (**Step 16:** Starting Sequence).
 
 ## Reference Material and other Manuals
 
@@ -235,7 +226,7 @@ should appear. Proceed as instructed by pressing Ctrl+C, and the program should 
 - ...
 
 **Roboflow:**
-- [Roboflow web site](https://roboflow.com/)
+- [Roboflow website](https://roboflow.com/)
 - [How to create an image dataset](https://docs.roboflow.com/adding-data)
 - ...
 - ...
