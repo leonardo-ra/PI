@@ -82,7 +82,7 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 **Step 12:** Go to the *Dropdown menu* icon in the top-right corner of the welcome screen. Press the *Settings* tab > *Network* tab, and set the Robot's IP address, submask and gateway. You can set the remaining parameters as '0.0.0.0'. Press apply.
 
-***NOTE:*** Make sure these three fields match the instructions in step 6.
+***NOTE:*** Make sure these three fields match the note presented in **step 6**.
 
 ![](https://user-images.githubusercontent.com/94324481/213375458-0198e3ac-3dec-4d27-93d3-6bd40245b09c.png)
 
