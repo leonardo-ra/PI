@@ -1,0 +1,6 @@
+Last Verification | Interval | Verification | Active
+-----------------------------------------------------------------
+30/11/2022 09:50:26 | 1 | Reference Part| Disable
+07/12/2022 10:09:12 | 28 | Board Diagnostic| Enable
+07/12/2022 10:09:31 | 28 | US Verification| Enable
+07/12/2022 10:09:49 | 7 | DS Verification| Enable

@@ -1,0 +1,13 @@
+{
+    "Portuguese": [
+        "Terminado com sucesso", 
+        ["Erro","encontrado"], 
+        "Iniciou com sucesso", 
+        "Final Result"],
+
+    "English":[
+        "Succesfully finished",
+        ["Error","found"], 
+        "Succesfully started", 
+        "Final Result"]
+}
