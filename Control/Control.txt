@@ -1,8 +1,0 @@
-A ideia destas subpastas iniciais: 
-Communication, Algorithms e Gripper
-É tornar mais fácil dividirmos tarefas.
-
-Claro que para testar a garra é preciso ligarmo-nos por RTDE como andamos a fazer por exemplo... 
-Está tudo ligado sempre. Mas assim dividem se as iterações das coisas. 
-Achei que seria mais prático para todos nesta fase.
-Depois podemos convergir tudo num script mais robusto.
