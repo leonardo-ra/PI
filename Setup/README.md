@@ -36,15 +36,18 @@ Alternatively, you can install git and later clone this repository. If you wish 
 
 **Step 6:** Setting a static IP address. Got to Windows *Control Panel* > *Network and Internet* > *Network and Sharing Centre*. You should see an "Unknown" Ethernet connection. Click on the Ethernet icon. You should now see the connection status tab:
 
-**POR IMAGEM** 
+![](https://user-images.githubusercontent.com/94324481/213884196-a500d02a-3423-45db-8f46-a1f7d9e1ee33.png)
+
+
+![](https://user-images.githubusercontent.com/94324481/213884361-1276a03f-49a7-45f3-a0d5-dd22c541e9ab.png)
 
 Go to *Properties* > (double-click) *Internet Protocol Version 4 (TCP/IPv4)*. You should see the IPV4 properties tab:
 
-**POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213884416-8f11dfac-319c-4e56-b34c-7608a6a7d279.png)
 
 Tick the option "*Use the following IP address:*" and fill in the parameters with these (optional) values:
 
- **POR IMAGEM**
+![](https://user-images.githubusercontent.com/94324481/213884549-07bafe8a-ad6b-430a-86a1-6f77f802819a.png)
 
 ***NOTE:*** The IP address should be on the same network as the UR5e i.e:
  - If you set your Robot's IP address with: 192.1.1.1 ; submask: 255.255.255.0 ; Gateway: 192.1.1.1  
