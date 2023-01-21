@@ -70,9 +70,9 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 :white_check_mark: Your PC connection should be set now :white_check_mark:
 
-### On the Ur5e teaching Pendant (Tablet):  
+### On the Ur5e teach Pendant (Tablet):  
 
-**Step 10:** Turning the Robot on. After booting up the teaching Pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power off* button, on the bottom-left corner.
+**Step 10:** Turning the Robot on. After booting up the teach Pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power off* button, on the bottom-left corner.
 
 ![](https://user-images.githubusercontent.com/94324481/213373266-7e36d5fd-c0c5-476e-bc3d-f26a0e29375f.png)
 
@@ -86,13 +86,13 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 ![](https://user-images.githubusercontent.com/94324481/213375458-0198e3ac-3dec-4d27-93d3-6bd40245b09c.png)
 
-**Step 13:** Press the *Teaching Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - if it doesn't, switch to *Local Control*.
+**Step 13:** Press the *Teach Pendant* icon in the top-right corner of the welcome screen - it should read *Local* by default - if it doesn't, switch to *Local Control*.
 
 :white_check_mark: The Robot Arm is now fully setup and ready to run :white_check_mark: 
 
 ### Running the System:
 
-**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**NOME DO PROGRAMA FINAL.py**". Start by opening that program in a code editor.
+**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**run.py**". Start by opening that program in a code editor.
 
 **POR IMAGEM do editor final**
 
@@ -110,7 +110,7 @@ This bit of code is inside the *load_model* function. The path to the project's 
 
     model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
 
-Save the edited **NOME DO PROGRAMA FINAL.py EDITAR AS LINHA DE CIMA TAMBÉM!**.
+Save the edited **run.py EDITAR AS LINHA DE CIMA TAMBÉM!**.
 
 **Step 15:** Verifying the TestBox. The system assumes it's using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
 
@@ -120,7 +120,7 @@ You can now turn the TestBox on.
 
 **Step 16:** Starting sequence. After the previous steps were taken, your system should be fully connected, with both the UR5e and the TestBox loaded/turned on. The starting sequence is as follows:
 
-**1** - On the UR5e teaching Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen and *Start from beginning*. 
+**1** - On the UR5e teach Pendant menu, go to the top-left corner and  press the *Program* Icon. You should see the previously loaded program (Polyscope_main.urp). Press the *play* icon on the bottom of the screen and *Start from beginning*. 
 
 ![](https://user-images.githubusercontent.com/94324481/213376574-17fb8877-3ac6-4421-9348-9a875e18816a.png)
 
@@ -128,14 +128,14 @@ You can now turn the TestBox on.
 (The program should now be trying to connect via socket to your PC. You can see the highlighted blue text as it is running.)
 
 
-**2** - Whilst the Polyscope_main.urp is running on the teaching Pendant, you can run **NOME DO PROGRAMA FINAL.py** on your terminal by typing this:
+**2** - Whilst the Polyscope_main.urp is running on the teach Pendant, you can run **run.py** on your terminal by typing this:
 
     python3 NOME DO PRGRAMA FINAL.py
 
 :white_check_mark: The program should be running! :white_check_mark:
 
 ## The Behaviour (What will the system do?)
-
+**ALTERAR ESTA PARTE**
 Once the system is running, several control messages will appear on your terminal window, one of which will be this one:
 
 > Do you wish to do Calibration? (Y/N)
@@ -152,7 +152,7 @@ Next, the system should print out its control/status messages in real time, with
 
  2)  The script processes the photo using *Yolo* (You Only Look Once), finds the location of the transceiver, sends the coordinates back to the arm.
 
- 3)  The arm moves to the appropriate location, and proceeds according to the teaching Pendant instructions.
+ 3)  The arm moves to the appropriate location, and proceeds according to the teach Pendant instructions.
 
  4)  The arm goes to a front-facing view of the TestBox, the camera takes a snapshot and sends it to the computer (points (2) and (3) repeat).
 
@@ -162,11 +162,11 @@ Next, the system should print out its control/status messages in real time, with
 
  7)  Once all the transceivers are inserted in the TestBox, as well as their respective optical fibres, a test begins. This test is run independently on the TestBox, and its status can be seen in the TestBox Control window.
 
-***NOTE:*** Since this test is being run in parallel to the program/teaching Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/resetting the system.
+***NOTE:*** Since this test is being run in parallel to the program/teach Pendant, it will keep running even if the those are halted. This is an important aspect to keep in mind when shutting down/resetting the system.
 
  8) Whilst the test is running in the background, the process keeps searching for more transceivers - going back to Point (1). 
 
- 9) If a test is complete, the TestBox sends a signal and the arm proceeds to point (4) to remove all the transceivers and their cables - the teaching Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, according to its respective test result (OK or Not OK).
+ 9) If a test is complete, the TestBox sends a signal and the arm proceeds to point (4) to remove all the transceivers and their cables - the teach Pendant has a different set of instructions for this phase. The arm then releases the transceiver in a specific zone, according to its respective test result (OK or Not OK).
 
  10) Afterwards, if all the transceivers are removed, the system loops back to point (1).
 
@@ -186,9 +186,9 @@ This issue usually occurs when the system wasn't initialised in the correct orde
 
 ## Turning off/Resetting the system
 
-### On the teaching pendant:
+### On the teach pendant:
 
-**Step 1:** Stop the teaching Pendant program by pressing the *stop* icon next to *play*.
+**Step 1:** Stop the teach Pendant program by pressing the *stop* icon next to *play*.
 
 ### On your Computer:
 
