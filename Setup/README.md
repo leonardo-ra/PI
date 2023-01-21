@@ -38,12 +38,9 @@ Alternatively, you can install git and later clone this repository. If you wish 
 
 ![](https://user-images.githubusercontent.com/94324481/213884196-a500d02a-3423-45db-8f46-a1f7d9e1ee33.png)
 
-
-![](https://user-images.githubusercontent.com/94324481/213884361-1276a03f-49a7-45f3-a0d5-dd22c541e9ab.png)
-
 Go to *Properties* > (double-click) *Internet Protocol Version 4 (TCP/IPv4)*. You should see the IPV4 properties tab:
 
-![](https://user-images.githubusercontent.com/94324481/213884416-8f11dfac-319c-4e56-b34c-7608a6a7d279.png)
+![](https://user-images.githubusercontent.com/94324481/213884361-1276a03f-49a7-45f3-a0d5-dd22c541e9ab.png) ![](https://user-images.githubusercontent.com/94324481/213884416-8f11dfac-319c-4e56-b34c-7608a6a7d279.png)
 
 Tick the option "*Use the following IP address:*" and fill in the parameters with these (optional) values:
 
