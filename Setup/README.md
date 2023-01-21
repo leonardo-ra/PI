@@ -70,7 +70,7 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 :white_check_mark: Your PC connection should be set now :white_check_mark:
 
-### On the Ur5e teach Pendant (Tablet):  
+### On the UR5e teach Pendant (Tablet):  
 
 **Step 10:** Turning the Robot on. After booting up the teach Pendant, start by turning the Ur5e completely ON (releasing the brakes) by pressing the *Power off* button, on the bottom-left corner.
 
