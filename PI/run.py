@@ -1,11 +1,11 @@
 import sys
-sys.path.append('C:\\Users\\User\\Desktop\\PIC\\PIC\\Robô final\\PI\\Modulous')
+sys.path.append('C:\\Users\\User\\Desktop\\PIC\\PIC\\Robô final\\PI\\Modules')
 import math
 import socket
 import torch
-import Extract_points_of_yolo
+from Modules import Extract_points_of_yolo
 import cv2
-import Calculate_camera_points
+from Modules import Calculate_camera_points
 import json
 from time import sleep
 import sys
