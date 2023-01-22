@@ -92,11 +92,11 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 ### Running the System:
 
-**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**run.py**". Start by opening that program in a code editor. You can run this file using:
+**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**run.py**". Start by opening that program in a code editor. You should run this file using:
 
     python3 run.py -h
 
-and make the cha...
+You can alter the specified information, according with the previous steps (**Step 6** and **Step 12**).
 
 
 Besides this, there are a couple of lines of code in this program, that should be edited in accordance with the previous steps:
