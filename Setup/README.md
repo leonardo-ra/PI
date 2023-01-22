@@ -92,25 +92,28 @@ Go to *Turn Windows Defender Firewall on or off* and tick *Turn off Windows Fire
 
 ### Running the System:
 
-**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**run.py**". Start by opening that program in a code editor.
+**Step 14:** Booting the system - In the downloaded files/cloned repository, you should see a Python file named "**run.py**". Start by opening that program in a code editor. You can run this file using:
 
-**POR IMAGEM do editor final**
+    python3 run.py -h
 
-There are two lines of code in this program, that should be edited in accordance with the previous steps:
+and make the cha...
 
-1:
-    HOST = 192.1.1.2
 
-This line of code must match the IP chosen for your PC connection in the previous steps (6 & 12).
+Besides this, there are a couple of lines of code in this program, that should be edited in accordance with the previous steps:
 
-2:
-> model = torch.hub.load(r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5', 'custom', path=r'C:\Users\Leo\Desktop\Eu\Trabalhoua\Matricula6Ano\1Sem\PI\Final(2)\yolov5\models\best (1).pt', source='local')
+> sys.path.append('C:\\Users\\User\\Desktop\\PIC\\PIC\\Robô final\\PI\\Modules')
 
-This bit of code is inside the *load_model* function. The path to the project's files/cloned repo should be edited to their location in your computer. If you downloaded them to your Desktop, it should read something like this for example:
+This path should be changed to the location of your files.
 
-    model = torch.hub.load(r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\NOMEDOFILE_FINALDOGIT\yolov5\yolov5\models\best (1).pt', source='local')`
+Also, the bit of code inside the *load_model* function. 
 
-Save the edited **run.py EDITAR AS LINHA DE CIMA TAMBÉM!**.
+> model1 = torch.hub.load(r'C:\Users\User\Desktop\PIC\PIC\Robô final\Final2\yolov5', 'custom', path=r'C:\Users\User\Desktop\PIC\PIC\Robô final\Final2\yolov5\models\best (1).pt', source='local')
+
+> model2 = torch.hub.load(r'C:\Users\User\Desktop\PIC\PIC\Robô final\Final2\yolov5', 'custom', path=r'C:\Users\User\Desktop\PIC\PIC\Robô final\Final2\yolov5\models\best_box2.pt', source='local')
+
+The path to the project's files/cloned repo should be edited to their location in your computer. If you downloaded them to your Desktop, it should read something like this for example:
+
+    model1 = torch.hub.load(r'C:\Users\Your_User\Desktop\PI\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\PI\yolov5\models\best (1).pt', source='local')`
 
 **Step 15:** Verifying the TestBox. The system assumes it's using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
 
@@ -130,7 +133,7 @@ You can now turn the TestBox on.
 
 **2** - Whilst the Polyscope_main.urp is running on the teach Pendant, you can run **run.py** on your terminal by typing this:
 
-    python3 NOME DO PRGRAMA FINAL.py
+    python3 run.py
 
 :white_check_mark: The program should be running! :white_check_mark:
 
@@ -194,7 +197,7 @@ This issue usually occurs when the system wasn't initialised in the correct orde
 
 **Step 2:** On the terminal, a message reading:
 
-> ! Polyscope program was stopped ! Ctrl+C on the terminal, Reboot the system
+> ! Polyscope program was stopped ! Ctrl+C on the terminal, Reboot the system.
 
 should appear. Proceed as instructed by pressing Ctrl+C, and the program should stop.
 
@@ -220,16 +223,20 @@ should appear. Proceed as instructed by pressing Ctrl+C, and the program should 
 - [The URScript Programming Languange (EN)](https://www.siemens-pro.ru/docs/ur/scriptManual.pdf)
 
 **Yolo:**
-**POR OS LINKS DE TUTORIAIS OU ASSIM DE YOLO/JUPYTER AS CENAS DE VISÃO QUE SE UTILIZARAM**
-- [What is Yolo?]()
-- ...
-- ...
+- [How to work with yolo, playlist guide](https://www.google.com/search?q=yolov5%20guide&tbm=vid&sxsrf=AJOqlzXnWTfcoxvoI_dw-P0D6z8fsZqR4Q%3A1674418098497&ei=spfNY_70HeqmkdUPjrqP8AQ&start=10&sa=N&ved=2ahUKEwj-ld2__dv8AhVqU6QEHQ7dA04Q8tMDegQIDhAE&biw=1920&bih=965&dpr=1#fpstate=ive&vld=cid:b4e9ef33,vid:rZyY2pNzypQ)
+- [How to deploy YOLO, video guide](https://www.youtube.com/watch?v=KQKwXga_uTM)
+- [Yolov5 GitHub](https://l.messenger.com/l.php?u=https%3A%2F%2Fgithub.com%2Fultralytics%2Fyolov5&h=AT0phyS36LDwkbLh0pNSvMVA3eeYAEQKcm_SyiWmiZQ4uGwZl53QSDWBDs2fednImFtwI1h_uiBN_epnr49gisnXlSsWN1ikJUIFtH-OwegVeoY8yeiO2XwydlNJH6ItQAiRlg)
+- Instructions to transfer YOLOv5 (PT): 
+- 1) Ir ao git do yolo: https://github.com/ultralytics/yolov5
+- 2) Download Zip para a pasta com os restantes ficheiros (main director)
+- 3) Unzipp
+- 4) Change name from yolov5-master to yolov5
+- 5) yolov5-> models -> copy weights files (best (1).pt, best_box2.pt)
+- 6) you must have the weight files also on the main director
 
 **Roboflow:**
 - [Roboflow website](https://roboflow.com/)
 - [How to create an image dataset](https://docs.roboflow.com/adding-data)
-- ...
-- ...
 
 ## Contacts
 
@@ -237,22 +244,18 @@ Leonardo Rodrigues:
     leonardo.r@ua.pt
 
 Vasco Fernandes:
-    x
+    vasco.fernandes@ua.pt
 
 Pedro Carvalho:
-    x
+    pmdc@ua.pt
 
 Nuno Domingues: 
-    x
+    nuno.coelho@ua.pt
 
 João Cordeiro: 
-    x
+    joao.cordeiro@ua.pt
 
-João Esteves: 
-    x
+João Mendes: 
+    joaomendes20@ua.pt
 
-**Não sei se querem também os vossos?**
-
->This project was only possible thanks to the environment provided by the brilliant team at PICadvanced, as well as engineers: Pedro Silva & Francisco Rodrigues, alongside Professor Mário Lima.
-
-**Posso tirar a quote se acharem que fica estúpido...**
+>This project was only possible thanks to the environment provided by the brilliant team at PICadvanced, as well as engineers: Pedro Silva, Francisco Rodrigues & Pedro Carvalho alongside Professor Mário Lima.
