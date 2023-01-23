@@ -237,7 +237,7 @@ should appear. Proceed as instructed by pressing Ctrl+C, and the program should 
 **Roboflow:**
 - [Roboflow website](https://roboflow.com/)
 - [How to create an image dataset](https://docs.roboflow.com/adding-data)
-- [What is YOLOv5, a Roboflow guide)(https://blog.roboflow.com/yolov5-improvements-and-evaluation/)
+- [What is YOLOv5, a Roboflow guide](https://blog.roboflow.com/yolov5-improvements-and-evaluation/)
 - [Roboflow Youtube guides](https://www.youtube.com/@Roboflow/videos)
 
 ## Contacts
