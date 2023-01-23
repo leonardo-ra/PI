@@ -115,9 +115,12 @@ The path to the project's files/cloned repo should be edited to their location i
 
     model1 = torch.hub.load(r'C:\Users\Your_User\Desktop\PI\yolov5', 'custom', path=r'C:\Users\Your_User\Desktop\PI\yolov5\models\best (1).pt', source='local')`
 
-**Step 15:** Verifying the TestBox. The system assumes it's using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is.
+**Step 15:** Verifying the TestBox. The system assumes it's using 'TestBox A' by default, however, before you can turn on the TestBox, make sure you check which one it is. To do this, you must edit all the occurrences of the function "getResults" inside "run.py":
 
-**POR AS COISAS QUE TÊM DE MUDAR NO PROGRAMA (SE É A CAIXA 'A', 'B', 'C'...) CASO SEJA PRECISO MUDAR**
+> getResults(language='Portuguese',BoxCom = 'init', module='A')
+
+The specified parameters that can be changed are: language (Portuguese or English) and module (A, B, C or D). 
+The BoxCom parameter shouldn't be changed.  
 
 You can now turn the TestBox on.
 
