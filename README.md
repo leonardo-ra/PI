@@ -4,9 +4,3 @@
 This git repository details the developments made by the team of six students who tackled this project.
 
 ### If you're now continuing our work with PICadvanced, make sure to look into our [PRISM](https://github.com/leonardo-ra/PI/tree/main/Setup) first and foremost!
-
-# Future Work:
-
-### Things we wish we could've done, and other important details.
-
-**ESCREVER AQUI O FUTURE WORK, OU TRADUZIR E POR AQUI O QUE ESCREVERMOS NO RELATÓRIO**
