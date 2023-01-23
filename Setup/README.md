@@ -122,7 +122,7 @@ The path to the project's files/cloned repo should be edited to their location i
 The specified parameters that can be changed are: language (Portuguese or English) and module (A, B, C or D). 
 The BoxCom parameter shouldn't be changed.  
 
-You can now turn the TestBox on.
+After this, you can now turn the TestBox on.
 
 **Step 16:** Starting sequence. After the previous steps were taken, your system should be fully connected, with both the UR5e and the TestBox loaded/turned on. The starting sequence is as follows:
 
@@ -240,6 +240,8 @@ should appear. Proceed as instructed by pressing Ctrl+C, and the program should 
 **Roboflow:**
 - [Roboflow website](https://roboflow.com/)
 - [How to create an image dataset](https://docs.roboflow.com/adding-data)
+- [What is YOLOv5, a Roboflow guide)(https://blog.roboflow.com/yolov5-improvements-and-evaluation/)
+- [Roboflow Youtube guides](https://www.youtube.com/@Roboflow/videos)
 
 ## Contacts
 
