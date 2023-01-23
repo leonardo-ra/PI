@@ -85,8 +85,8 @@ class robot:
         self.conn, addr = s.accept()                                        # Establish connection with client
         print(f"Connection established with {addr}")
 
-    def getResults(self, BoxCom = 'init'):
-        self.slotRes, self.info, self.transceivers = Tbox.run(resultCheck = BoxCom)  # PC starts to communicate with test box and only stops when all the test have finished.
+    def getResults(self, language = 'Portuguese', BoxCom = 'init', module='A'):
+        self.slotRes, self.info, self.transceivers = Tbox.run(language='Portuguese', resultCheck = BoxCom, module='A')  # PC starts to communicate with test box and only stops when all the test have finished.
         if (self.info == 'TESTS RUNNING') or (self.info == 'TRANSCEIVERS MISSING'):
             self.info = 0
         else:
@@ -101,10 +101,10 @@ class robot:
     def test_done_function(self):
         if self.transceivers == False:
             #print("SOME Transceivers missing")
-            self.getResults(BoxCom = 'start')
+            self.getResults(language='Portuguese',BoxCom = 'start',module='A')
         else:
             print("ALL Transceivers Inserted")
-            self.getResults(BoxCom = 'check')
+            self.getResults(language ='Portuguese', BoxCom = 'check', module='A')
         
         # Send 1 to indicate that the test finished
 
@@ -116,7 +116,7 @@ class robot:
         print(slotn)
 
         if self.i == 1:
-            self.getResults(BoxCom = 'check')
+            self.getResults(language='Portuguese',BoxCom = 'check', module='A')
             tuplo = (36,12.57,self.slotRes[slotn])
         elif self.i == 2:
             tuplo = (86,12.56,self.slotRes[slotn])
@@ -183,7 +183,7 @@ class robot:
         """
         print("--------------------------------Starting program----------------------------------------")
         self.robot_communication()
-        self.getResults(BoxCom='init')
+        self.getResults(language='Portuguese',BoxCom='init',module='A')
 
         while True:
             try:
