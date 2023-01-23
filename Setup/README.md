@@ -141,12 +141,12 @@ After this, you can now turn the TestBox on.
 :white_check_mark: The program should be running! :white_check_mark:
 
 ## The Behaviour (What will the system do?)
-**ALTERAR ESTA PARTE**
+
 Once the system is running, several control messages will appear on your terminal window, one of which will be this one:
 
 > Do you wish to do Calibration? (Y/N)
 
-Pressing Y, y or enter, will have the system calibrate itself using previously taken photos of the working surface. **Acrescentar ou remover**
+Pressing Y, y or enter, will have the system calibrate itself using previously taken photos of the working surface.
 
 Afterwards, a big TestBox Control App should pop out. This App will show you the status of the TestBox and its transceivers. This window should be put to the side or minimised, not closed!
 
@@ -184,11 +184,8 @@ Next, the system should print out its control/status messages in real time, with
 
 This issue usually occurs when the system wasn't initialised in the correct order (Pendant 1st, script 2nd), or the Ethernet cable isn't connected and the system can't perform the socket connection. **Solution** - Kill the terminal and reset the system, making sure everything is connected.
 
-- **b)** **ADICIONAR O ERRO DE TCP QUANDO SE FECHA A APLICAÇÃO DA PIC** 
+- **b)** Closing the TestBox Control App will make it impossible to communicate with it, compromising the system's functions. This window should only be closed once the system is ready to be shut down.
 
-- **c)** **ADICIONAR O ERRO DA CÂMARA N TAR LIGADA**
-
-- **d)** **Adicionar eventualmente mais algum erro que seja mais comum.**
 
 ## Turning off/Resetting the system
 
